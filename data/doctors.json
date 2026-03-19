@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Dr. Md. Rafiqul Islam",
+    "speciality": "Medicine Specialist",
+    "days": "Sat, Mon, Wed",
+    "time": "5:00pm - 9:00pm",
+    "fee": "500 BDT",
+    "image": "assets/images/doctor-placeholder.svg"
+  },
+  {
+    "name": "Dr. Sharmin Akter",
+    "speciality": "Gynecologist & Obstetrician",
+    "days": "Sun, Tue, Thu",
+    "time": "4:00pm - 8:00pm",
+    "fee": "600 BDT",
+    "image": "assets/images/doctor-placeholder-female.svg"
+  },
+  {
+    "name": "Dr. Kamrul Hasan",
+    "speciality": "Cardiologist",
+    "days": "Mon, Wed, Fri",
+    "time": "6:00pm - 10:00pm",
+    "fee": "800 BDT",
+    "image": "assets/images/doctor-placeholder.svg"
+  },
+  {
+    "name": "Dr. Nasrin Sultana",
+    "speciality": "Child Specialist (Pediatrics)",
+    "days": "Sat, Sun, Tue",
+    "time": "5:00pm - 8:00pm",
+    "fee": "500 BDT",
+    "image": "assets/images/doctor-placeholder-female.svg"
+  },
+  {
+    "name": "Dr. Rezaul Karim",
+    "speciality": "Orthopedic Surgeon",
+    "days": "Thu, Fri, Sat",
+    "time": "4:00pm - 7:00pm",
+    "fee": "700 BDT",
+    "image": "assets/images/doctor-placeholder.svg"
+  },
+  {
+    "name": "Dr. Farhana Begum",
+    "speciality": "Eye Specialist (Ophthalmologist)",
+    "days": "Sun, Mon, Wed",
+    "time": "5:00pm - 9:00pm",
+    "fee": "600 BDT",
+    "image": "assets/images/doctor-placeholder-female.svg"
+  }
+]
