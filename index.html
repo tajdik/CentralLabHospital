@@ -1271,28 +1271,26 @@
                 >Preferred Date</label
               >
               <div class="relative">
+                <!-- Visible display: shows DD/MM/YYYY -->
                 <input
                   type="text"
                   id="appt-date-display"
                   readonly
                   placeholder="DD/MM/YYYY"
-                  class="form-input cursor-pointer pr-12 bg-white"
-                  onclick="document.getElementById('appt-date-real').showPicker ? document.getElementById('appt-date-real').showPicker() : document.getElementById('appt-date-real').click()"
+                  class="form-input cursor-pointer pr-12 bg-white pointer-events-none"
                 />
-                <button
-                  type="button"
-                  onclick="document.getElementById('appt-date-real').showPicker ? document.getElementById('appt-date-real').showPicker() : document.getElementById('appt-date-real').click()"
-                  class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-600 transition"
-                >
+                <!-- Calendar icon (decorative) -->
+                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                </button>
+                </span>
+                <!-- Transparent date input overlaid on top — user clicks this directly -->
                 <input
                   type="date"
                   id="appt-date-real"
-                  class="absolute inset-0 opacity-0 pointer-events-none w-full h-full"
+                  class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
                   onchange="
                     var v=this.value;
                     if(v){
