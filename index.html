@@ -2227,23 +2227,37 @@
       })();
 
       // ── DATE PICKER: default today, min today, display DD/MM/YYYY ───
-      (function () {
-        const real    = document.getElementById('appt-date-real');
-        const display = document.getElementById('appt-date-display');
-        const hidden  = document.getElementById('appt-date-hidden');
-        if (!real || !display || !hidden) return;
+(function () {
+  const real    = document.getElementById('appt-date-real');
+  const display = document.getElementById('appt-date-display');
+  const hidden  = document.getElementById('appt-date-hidden');
+  if (!real || !display || !hidden) return;
 
-        const today = new Date();
-        const yyyy  = today.getFullYear();
-        const mm    = String(today.getMonth() + 1).padStart(2, '0');
-        const dd    = String(today.getDate()).padStart(2, '0');
-        const iso   = `${yyyy}-${mm}-${dd}`;
+  const today = new Date();
 
-        real.min   = iso;
-        real.value = iso;
-        hidden.value   = iso;
-        display.value  = `${dd}/${mm}/${yyyy}`;
-      })();
+  // 👉 MIN DATE (today)
+  const yyyy  = today.getFullYear();
+  const mm    = String(today.getMonth() + 1).padStart(2, '0');
+  const dd    = String(today.getDate()).padStart(2, '0');
+  const minIso = `${yyyy}-${mm}-${dd}`;
+
+  // 👉 MAX DATE (today + 7 days)
+  const maxDate = new Date();
+  maxDate.setDate(today.getDate() + 7);
+
+  const maxYYYY = maxDate.getFullYear();
+  const maxMM   = String(maxDate.getMonth() + 1).padStart(2, '0');
+  const maxDD   = String(maxDate.getDate()).padStart(2, '0');
+  const maxIso  = `${maxYYYY}-${maxMM}-${maxDD}`;
+
+  // 👉 Apply
+  real.min = minIso;
+  real.max = maxIso;
+
+  real.value   = minIso;
+  hidden.value = minIso;
+  display.value = `${dd}/${mm}/${yyyy}`;
+})();
     </script>
   </body>
 </html>
