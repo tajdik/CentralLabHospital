@@ -273,7 +273,7 @@
             01722-705957
           </a>
           <a href="#appointment" class="bg-[#1D4ED8] hover:bg-[#1e40af] text-white px-4 py-2 rounded-lg text-sm font-semibold transition" data-i18n="nav_booknow">
-            Book Now
+            ${t['doc_book']}
           </a>
         </div>
 
@@ -308,7 +308,7 @@
             Call Now
           </a>
           <a href="#appointment" class="mobile-nav-link flex-1 text-center bg-[#1D4ED8] text-white py-2.5 rounded-lg text-sm font-semibold hover:bg-[#1e40af] transition" data-i18n="nav_booknow">
-            Book Now
+            ${t['doc_book']}
           </a>
         </div>
       </div>
@@ -572,7 +572,7 @@
       <div class="text-center mb-10">
         <div class="flex items-center justify-center gap-3 mb-3">
           <div class="h-0.5 w-12 bg-[#1D4ED8] rounded-full"></div>
-          <span class="text-sm font-semibold text-[#1D4ED8] uppercase tracking-wider" data-i18n="appt_label">Book Now</span>
+          <span class="text-sm font-semibold text-[#1D4ED8] uppercase tracking-wider" data-i18n="appt_label">${t['doc_book']}</span>
           <div class="h-0.5 w-12 bg-[#1D4ED8] rounded-full"></div>
         </div>
         <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900" data-i18n="appt_title">Book an Appointment</h2>
@@ -817,7 +817,7 @@
         doctors_label: 'Our Specialists',
         doctors_title: 'Consult Our Expert Doctors',
         doctors_sub: 'Book your appointment with our experienced specialists — available at convenient evening times.',
-        doc_book: 'Book Now',
+        doc_book: 'Book Appointment',
         tests_label: 'Diagnostics', tests_title: 'Tests & Pricing',
         tests_sub: 'Affordable diagnostic tests with fast turnaround. All results are accurate and certified.',
         tests_search: 'Search tests...', tests_col1: 'Test Name', tests_col2: 'Price',
@@ -873,7 +873,7 @@
         doctors_label: 'আমাদের বিশেষজ্ঞ',
         doctors_title: 'বিশেষজ্ঞ ডাক্তারের পরামর্শ নিন',
         doctors_sub: 'আমাদের অভিজ্ঞ বিশেষজ্ঞদের সাথে অ্যাপয়েন্টমেন্ট নিন — সন্ধ্যায় সুবিধাজনক সময়ে উপলব্ধ।',
-        doc_book: 'বুক করুন',
+        doc_book: 'বুক অ্যাপয়েন্টমেন্ট',
         tests_label: 'ডায়াগনস্টিক', tests_title: 'পরীক্ষা ও মূল্য তালিকা',
         tests_sub: 'দ্রুত ফলাফলসহ সাশ্রয়ী ডায়াগনস্টিক পরীক্ষা। সব ফলাফল নির্ভুল এবং প্রত্যয়িত।',
         tests_search: 'পরীক্ষা খুঁজুন...', tests_col1: 'পরীক্ষার নাম', tests_col2: 'মূল্য',
@@ -1068,9 +1068,14 @@
             </div>
           </div>
           <a href="#appointment"
+            class="mt-5 block text-center bg-blue-50 text-[#1D4ED8] py-2.5 rounded-xl font-bold text-sm border border-blue-100 hover:bg-[#1D4ED8] hover:text-white transition">
+            ${t['doc_book']}
+          </a>
+          <!--<a href="#appointment"
             class="doc-book-btn block text-center bg-[#F0FDF4] text-[#22C55E] py-2.5 rounded-lg font-bold border border-[#DCFCE7] hover:bg-[#22C55E] hover:text-white transition">
             ${t['doc_book']}
           </a>
+          -->
         `;
         container.appendChild(card);
         staggerObs.observe(card);
