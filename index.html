@@ -1219,10 +1219,18 @@
                 <input
                   type="tel"
                   name="entry.1712753723"
+                  id="appt-phone"
                   required
                   placeholder="01XXXXXXXXX"
+                  pattern="[0-9]{11,14}"
+                  minlength="11"
+                  maxlength="14"
+                  inputmode="numeric"
                   class="form-input"
                 />
+                <p id="phone-error" class="hidden mt-1 text-xs text-red-500" data-i18n="phone_error">
+                  Please enter a valid BD phone number (minimum 11 digits)
+                </p>
               </div>
             </div>
             <div>
@@ -1262,7 +1270,40 @@
                 data-i18n="appt_date_label"
                 >Preferred Date</label
               >
-              <input type="date" name="entry.1005078345" class="form-input" />
+              <div class="relative">
+                <input
+                  type="text"
+                  id="appt-date-display"
+                  readonly
+                  placeholder="DD/MM/YYYY"
+                  class="form-input cursor-pointer pr-12 bg-white"
+                  onclick="document.getElementById('appt-date-real').showPicker ? document.getElementById('appt-date-real').showPicker() : document.getElementById('appt-date-real').click()"
+                />
+                <button
+                  type="button"
+                  onclick="document.getElementById('appt-date-real').showPicker ? document.getElementById('appt-date-real').showPicker() : document.getElementById('appt-date-real').click()"
+                  class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-600 transition"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </button>
+                <input
+                  type="date"
+                  id="appt-date-real"
+                  class="absolute inset-0 opacity-0 pointer-events-none w-full h-full"
+                  onchange="
+                    var v=this.value;
+                    if(v){
+                      var p=v.split('-');
+                      document.getElementById('appt-date-display').value=p[2]+'/'+p[1]+'/'+p[0];
+                      document.getElementById('appt-date-hidden').value=v;
+                    }
+                  "
+                />
+                <input type="hidden" id="appt-date-hidden" name="entry.1005078345" />
+              </div>
             </div>
             <div>
               <label
@@ -1738,6 +1779,7 @@
           appt_name_label: "Patient Name *",
           appt_name_ph: "Your full name",
           appt_phone_label: "Phone Number *",
+          phone_error: "Please enter a valid BD phone number (minimum 11 digits)",
           appt_address_label: "Address *",
           appt_address_ph: "Your village / area / district",
           appt_doctor_label: "Select Doctor",
@@ -1821,7 +1863,7 @@
           doctors_label: "আমাদের বিশেষজ্ঞ",
           doctors_title: "বিশেষজ্ঞ ডাক্তারের পরামর্শ নিন",
           doctors_sub:
-            "আমাদের অভিজ্ঞ বিশেষজ্ঞদের সাথে অ্যাপয়েন্টমেন্ট নিন — সন্ধ্যায় সুবিধাজনক সময়ে উপলব্ধ।",
+            "আমাদের অভিজ্ঞ বিশেষজ্ঞদের সাথে অ্যাপয়েন্টমেন্ট নিন — সন্ধ্যায় সুবিধাজনক সac�য়ে উপলব্ধ।",
           doc_book: "বুক অ্যাপয়েন্টমেন্ট",
           tests_label: "ডায়াগনস্টিক",
           tests_title: "পরীক্ষা ও মূল্য তালিকা",
@@ -1840,6 +1882,7 @@
           appt_name_label: "রোগীর নাম *",
           appt_name_ph: "আপনার পুরো নাম",
           appt_phone_label: "ফোন নম্বর *",
+          phone_error: "সঠিক বাংলাদেশি নম্বর দিন (কমপক্ষে ১১ সংখ্যা)",
           appt_address_label: "ঠিকানা *",
           appt_address_ph: "আপনার গ্রাম / এলাকা / জেলা",
           appt_doctor_label: "ডাক্তার বেছে নিন",
@@ -2156,6 +2199,53 @@
       // ── INIT ────────────────────────────────────
       loadDoctors();
       loadTests();
+
+      // ── PHONE VALIDATION ────────────────────────────────────────────
+      (function () {
+        const phone = document.getElementById('appt-phone');
+        const err   = document.getElementById('phone-error');
+        if (!phone || !err) return;
+
+        phone.addEventListener('input', function () {
+          // Strip non-digits
+          this.value = this.value.replace(/[^0-9]/g, '');
+          if (this.value.length > 0 && this.value.length < 11) {
+            err.classList.remove('hidden');
+            this.classList.add('border-red-400');
+            this.classList.remove('border-gray-200');
+          } else {
+            err.classList.add('hidden');
+            this.classList.remove('border-red-400');
+            this.classList.add('border-gray-200');
+          }
+        });
+
+        phone.addEventListener('blur', function () {
+          if (this.value.length > 0 && this.value.length < 11) {
+            err.classList.remove('hidden');
+            this.classList.add('border-red-400');
+          }
+        });
+      })();
+
+      // ── DATE PICKER: default today, min today, display DD/MM/YYYY ───
+      (function () {
+        const real    = document.getElementById('appt-date-real');
+        const display = document.getElementById('appt-date-display');
+        const hidden  = document.getElementById('appt-date-hidden');
+        if (!real || !display || !hidden) return;
+
+        const today = new Date();
+        const yyyy  = today.getFullYear();
+        const mm    = String(today.getMonth() + 1).padStart(2, '0');
+        const dd    = String(today.getDate()).padStart(2, '0');
+        const iso   = `${yyyy}-${mm}-${dd}`;
+
+        real.min   = iso;
+        real.value = iso;
+        hidden.value   = iso;
+        display.value  = `${dd}/${mm}/${yyyy}`;
+      })();
     </script>
   </body>
 </html>
