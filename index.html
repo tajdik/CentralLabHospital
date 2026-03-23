@@ -286,8 +286,24 @@
           box-shadow 0.22s ease;
       }
       .doctor-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.09);
+      }
+      .doc-expand-panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.38s cubic-bezier(0.4,0,0.2,1), opacity 0.28s ease;
+        opacity: 0;
+      }
+      .doc-expand-panel.open {
+        max-height: 800px;
+        opacity: 1;
+      }
+      .doc-details-btn .chevron {
+        transition: transform 0.3s ease;
+      }
+      .doc-details-btn.active .chevron {
+        transform: rotate(180deg);
       }
 
       /* ── TEST ROW ── */
@@ -997,7 +1013,7 @@
 
         <div
           id="doctor-list"
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          class="grid grid-cols-1 md:grid-cols-2 gap-5"
         >
           <div
             class="text-center py-12 text-gray-400 col-span-full"
@@ -1228,7 +1244,11 @@
                   inputmode="numeric"
                   class="form-input"
                 />
-                <p id="phone-error" class="hidden mt-1 text-xs text-red-500" data-i18n="phone_error">
+                <p
+                  id="phone-error"
+                  class="hidden mt-1 text-xs text-red-500"
+                  data-i18n="phone_error"
+                >
                   Please enter a valid BD phone number (minimum 11 digits)
                 </p>
               </div>
@@ -1280,10 +1300,21 @@
                   class="form-input cursor-pointer pr-12 bg-white pointer-events-none"
                 />
                 <!-- Calendar icon (decorative) -->
-                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                <span
+                  class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
                   </svg>
                 </span>
                 <!-- Transparent date input overlaid on top — user clicks this directly -->
@@ -1300,7 +1331,11 @@
                     }
                   "
                 />
-                <input type="hidden" id="appt-date-hidden" name="entry.1005078345" />
+                <input
+                  type="hidden"
+                  id="appt-date-hidden"
+                  name="entry.1005078345"
+                />
               </div>
             </div>
             <div>
@@ -1760,6 +1795,13 @@
           doctors_sub:
             "Book your appointment with our experienced specialists — available at convenient evening times.",
           doc_book: "Book Appointment",
+          doc_view_details: "View Details",
+          doc_hide_details: "Hide Details",
+          doc_fee: "Fee",
+          doc_qualifications: "Qualifications",
+          doc_specializations: "Specializations",
+          doc_workplace: "Workplace",
+          doc_schedule: "Full Schedule",
           tests_label: "Diagnostics",
           tests_title: "Tests & Pricing",
           tests_sub:
@@ -1777,7 +1819,8 @@
           appt_name_label: "Patient Name *",
           appt_name_ph: "Your full name",
           appt_phone_label: "Phone Number *",
-          phone_error: "Please enter a valid BD phone number (minimum 11 digits)",
+          phone_error:
+            "Please enter a valid BD phone number (minimum 11 digits)",
           appt_address_label: "Address *",
           appt_address_ph: "Your village / area / district",
           appt_doctor_label: "Select Doctor",
@@ -1863,6 +1906,13 @@
           doctors_sub:
             "আমাদের অভিজ্ঞ বিশেষজ্ঞদের সাথে অ্যাপয়েন্টমেন্ট নিন — সন্ধ্যায় সুবিধাজনক সac�য়ে উপলব্ধ।",
           doc_book: "বুক অ্যাপয়েন্টমেন্ট",
+          doc_view_details: "বিস্তারিত দেখুন",
+          doc_hide_details: "বিস্তারিত লুকান",
+          doc_fee: "ফি",
+          doc_qualifications: "যোগ্যতা",
+          doc_specializations: "বিশেষজ্ঞতা",
+          doc_workplace: "কর্মস্থল",
+          doc_schedule: "সময়সূচি",
           tests_label: "ডায়াগনস্টিক",
           tests_title: "পরীক্ষা ও মূল্য তালিকা",
           tests_sub:
@@ -1937,10 +1987,8 @@
           if (t[key] !== undefined) el.placeholder = t[key];
         });
 
-        // Doctor "Book Now" buttons (dynamically created)
-        document.querySelectorAll(".doc-book-btn").forEach((el) => {
-          el.textContent = t["doc_book"];
-        });
+        // Re-render doctor cards with new language
+        if (window._doctorsData) renderDoctors(window._doctorsData);
 
         // Toggle button labels
         const nextLangLabel = lang === "en" ? "বাংলা" : "English";
@@ -2054,6 +2102,7 @@
           const res = await fetch("data/doctors.json");
           if (!res.ok) throw new Error();
           const doctors = await res.json();
+          window._doctorsData = doctors;
           renderDoctors(doctors);
           populateDoctorSelect(doctors);
         } catch {
@@ -2064,56 +2113,169 @@
 
       function renderDoctors(doctors) {
         const container = document.getElementById("doctor-list");
-        container.innerHTML = "";
         const t = i18n[currentLang];
+        const L = currentLang;
+
+        // Capture expanded states before re-render
+        const expandedStates = {};
+        container.querySelectorAll("[data-doc-idx]").forEach((el) => {
+          const idx = el.getAttribute("data-doc-idx");
+          const panel = el.querySelector(".doc-expand-panel");
+          if (panel && panel.classList.contains("open")) expandedStates[idx] = true;
+        });
+
+        container.innerHTML = "";
+
         doctors.forEach((doc, idx) => {
+          const name = typeof doc.name === "object" ? doc.name[L] : doc.name;
+          const speciality = typeof doc.speciality === "object" ? doc.speciality[L] : doc.speciality;
+          const degrees = typeof doc.degrees === "object" ? doc.degrees[L] : (doc.degrees || "");
+          const qualTxt = typeof doc.qualifications === "object" ? doc.qualifications[L] : (doc.qualifications || "");
+          const workplace = typeof doc.workplace === "object" ? doc.workplace[L] : (doc.workplace || "");
+          const specs = Array.isArray(doc.specializations)
+            ? doc.specializations
+            : (doc.specializations && doc.specializations[L]) || [];
+          const schedule = Array.isArray(doc.schedule) ? doc.schedule : [];
+
+          const qualLines = qualTxt.split("\n").filter(Boolean).map(l =>
+            `<p class="text-gray-600 text-sm leading-relaxed">${l}</p>`
+          ).join("");
+
+          const specItems = specs.map(s =>
+            `<li class="flex items-start gap-2 text-gray-600 text-sm"><span class="text-[#22C55E] font-bold mt-0.5">•</span><span>${s}</span></li>`
+          ).join("");
+
+          const scheduleItems = schedule.map(s => {
+            const days = typeof s.days === "object" ? s.days[L] : s.days;
+            return `<div class="flex items-center gap-2 text-sm text-gray-600">
+              <span class="font-medium text-gray-700">${days}:</span>
+              <span>${s.time}</span>
+            </div>`;
+          }).join("");
+
+          const firstSchedule = schedule[0] || {};
+          const firstDays = firstSchedule.days ? (typeof firstSchedule.days === "object" ? firstSchedule.days[L] : firstSchedule.days) : "";
+          const firstTime = firstSchedule.time || "";
+
+          const isExpanded = !!expandedStates[idx];
+
           const card = document.createElement("div");
-          card.className =
-            "doctor-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition stagger-child";
+          card.className = "doctor-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden stagger-child";
           card.style.transitionDelay = idx * 80 + "ms";
+          card.setAttribute("data-doc-idx", idx);
+
           card.innerHTML = `
-          <div class="flex items-center gap-4 mb-4">
-            <img src="${doc.image}" alt="Photo of ${doc.name}"
-              class="w-16 h-16 rounded-full object-cover border-2 border-[#DBEAFE] flex-shrink-0"
-              onerror="this.src='assets/images/doctor-placeholder.svg'" />
-            <div class="min-w-0">
-              <h3 class="text-xl font-bold text-[#1D4ED8] mb-0.5 leading-snug">${doc.name}</h3>
-              <p class="text-gray-500 font-medium uppercase text-xs tracking-wider">${doc.speciality}</p>
+            <div class="p-5">
+              <!-- Header -->
+              <div class="flex items-center gap-4 mb-4">
+                <img src="${doc.image}" alt="${name}"
+                  class="w-14 h-14 rounded-full object-cover border-2 border-[#DBEAFE] flex-shrink-0 bg-gray-50"
+                  onerror="this.src='assets/images/doctor-placeholder.svg'" />
+                <div class="min-w-0 flex-1">
+                  <h3 class="text-base font-bold text-[#1D4ED8] leading-snug">${name}</h3>
+                  <p class="text-gray-500 text-xs font-semibold mt-0.5 uppercase tracking-wide">${speciality}</p>
+                  <p class="text-gray-400 text-xs mt-0.5">${degrees}</p>
+                </div>
+              </div>
+
+              <!-- Quick info -->
+              <div class="flex flex-wrap gap-x-4 gap-y-1.5 mb-4 text-sm">
+                <span class="flex items-center gap-1.5 text-gray-600">
+                  <svg class="w-3.5 h-3.5 text-[#1D4ED8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                  </svg>
+                  <span>${firstDays}</span>
+                </span>
+                <span class="flex items-center gap-1.5 text-gray-600">
+                  <svg class="w-3.5 h-3.5 text-[#1D4ED8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  <span>${firstTime}</span>
+                </span>
+                <span class="flex items-center gap-1.5 text-gray-700 font-semibold">
+                  <svg class="w-3.5 h-3.5 text-[#22C55E] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                  </svg>
+                  <span>${doc.fee}</span>
+                </span>
+              </div>
+
+              <!-- Buttons -->
+              <div class="flex gap-2">
+                <a href="#appointment"
+                  class="flex-1 text-center bg-[#1D4ED8] text-white py-2 rounded-xl font-semibold text-sm hover:bg-[#1e40af] transition">
+                  ${t["doc_book"]}
+                </a>
+                <button
+                  class="doc-details-btn flex items-center gap-1.5 px-3 py-2 rounded-xl border border-gray-200 text-gray-600 text-sm font-medium hover:border-[#1D4ED8] hover:text-[#1D4ED8] transition ${isExpanded ? 'active' : ''}"
+                  onclick="(function(btn){
+                    const panel = btn.closest('[data-doc-idx]').querySelector('.doc-expand-panel');
+                    const isOpen = panel.classList.toggle('open');
+                    btn.classList.toggle('active', isOpen);
+                    const t = i18n[currentLang];
+                    btn.querySelector('.details-label').textContent = isOpen ? t['doc_hide_details'] : t['doc_view_details'];
+                  })(this)">
+                  <span class="details-label">${isExpanded ? t["doc_hide_details"] : t["doc_view_details"]}</span>
+                  <svg class="chevron w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="space-y-2 text-sm mb-6">
-            <div class="flex items-center gap-2 text-gray-600">
-              <svg class="w-4 h-4 text-[#22C55E] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <span>${doc.days}</span>
+
+            <!-- Expand Panel -->
+            <div class="doc-expand-panel ${isExpanded ? 'open' : ''}">
+              <div class="border-t border-gray-100 mx-5"></div>
+              <div class="p-5 space-y-4">
+
+                <!-- Qualifications -->
+                <div>
+                  <div class="flex items-center gap-2 mb-2">
+                    <svg class="w-4 h-4 text-[#1D4ED8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-3.922L12 14z"/>
+                    </svg>
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#1D4ED8]">${t["doc_qualifications"]}</span>
+                  </div>
+                  <div class="space-y-0.5 pl-6">${qualLines}</div>
+                </div>
+
+                <!-- Specializations -->
+                <div>
+                  <div class="flex items-center gap-2 mb-2">
+                    <svg class="w-4 h-4 text-[#1D4ED8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                    </svg>
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#1D4ED8]">${t["doc_specializations"]}</span>
+                  </div>
+                  <ul class="space-y-1 pl-6">${specItems}</ul>
+                </div>
+
+                <!-- Workplace -->
+                <div>
+                  <div class="flex items-center gap-2 mb-2">
+                    <svg class="w-4 h-4 text-[#1D4ED8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#1D4ED8]">${t["doc_workplace"]}</span>
+                  </div>
+                  <p class="text-gray-600 text-sm pl-6">${workplace}</p>
+                </div>
+
+                <!-- Full Schedule -->
+                <div>
+                  <div class="flex items-center gap-2 mb-2">
+                    <svg class="w-4 h-4 text-[#1D4ED8] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#1D4ED8]">${t["doc_schedule"]}</span>
+                  </div>
+                  <div class="space-y-1 pl-6">${scheduleItems}</div>
+                </div>
+
+              </div>
             </div>
-            <div class="flex items-center gap-2 text-gray-600">
-              <svg class="w-4 h-4 text-[#22C55E] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <span>${doc.time}</span>
-            </div>
-            <div class="flex items-center gap-2 text-gray-600">
-              <svg class="w-4 h-4 text-[#22C55E] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-              </svg>
-              <span>Fee: <strong>${doc.fee}</strong></span>
-            </div>
-          </div>
-          <a href="#appointment"
-            class="mt-5 block text-center bg-blue-50 text-[#1D4ED8] py-2.5 rounded-xl font-bold text-sm border border-blue-100 hover:bg-[#1D4ED8] hover:text-white transition">
-            ${t["doc_book"]}
-          </a>
-          <!--<a href="#appointment"
-            class="doc-book-btn block text-center bg-[#F0FDF4] text-[#22C55E] py-2.5 rounded-lg font-bold border border-[#DCFCE7] hover:bg-[#22C55E] hover:text-white transition">
-            ${t["doc_book"]}
-          </a>
-          -->
-        `;
+          `;
+
           container.appendChild(card);
           staggerObs.observe(card);
         });
@@ -2121,10 +2283,15 @@
 
       function populateDoctorSelect(doctors) {
         const select = document.getElementById("doctor-select");
+        // Remove previously added options (keep first placeholder)
+        while (select.options.length > 1) select.remove(1);
+        const L = currentLang;
         doctors.forEach((doc) => {
+          const name = typeof doc.name === "object" ? doc.name[L] : doc.name;
+          const speciality = typeof doc.speciality === "object" ? doc.speciality[L] : doc.speciality;
           const opt = document.createElement("option");
-          opt.value = doc.name;
-          opt.textContent = `${doc.name} (${doc.speciality})`;
+          opt.value = typeof doc.name === "object" ? doc.name.en : doc.name;
+          opt.textContent = `${name} (${speciality})`;
           select.appendChild(opt);
         });
       }
@@ -2200,64 +2367,64 @@
 
       // ── PHONE VALIDATION ────────────────────────────────────────────
       (function () {
-        const phone = document.getElementById('appt-phone');
-        const err   = document.getElementById('phone-error');
+        const phone = document.getElementById("appt-phone");
+        const err = document.getElementById("phone-error");
         if (!phone || !err) return;
 
-        phone.addEventListener('input', function () {
+        phone.addEventListener("input", function () {
           // Strip non-digits
-          this.value = this.value.replace(/[^0-9]/g, '');
+          this.value = this.value.replace(/[^0-9]/g, "");
           if (this.value.length > 0 && this.value.length < 11) {
-            err.classList.remove('hidden');
-            this.classList.add('border-red-400');
-            this.classList.remove('border-gray-200');
+            err.classList.remove("hidden");
+            this.classList.add("border-red-400");
+            this.classList.remove("border-gray-200");
           } else {
-            err.classList.add('hidden');
-            this.classList.remove('border-red-400');
-            this.classList.add('border-gray-200');
+            err.classList.add("hidden");
+            this.classList.remove("border-red-400");
+            this.classList.add("border-gray-200");
           }
         });
 
-        phone.addEventListener('blur', function () {
+        phone.addEventListener("blur", function () {
           if (this.value.length > 0 && this.value.length < 11) {
-            err.classList.remove('hidden');
-            this.classList.add('border-red-400');
+            err.classList.remove("hidden");
+            this.classList.add("border-red-400");
           }
         });
       })();
 
       // ── DATE PICKER: default today, min today, display DD/MM/YYYY ───
-(function () {
-  const real    = document.getElementById('appt-date-real');
-  const display = document.getElementById('appt-date-display');
-  const hidden  = document.getElementById('appt-date-hidden');
-  if (!real || !display || !hidden) return;
+      (function () {
+        const real = document.getElementById("appt-date-real");
+        const display = document.getElementById("appt-date-display");
+        const hidden = document.getElementById("appt-date-hidden");
+        if (!real || !display || !hidden) return;
 
-  const today = new Date();
+        const today = new Date();
 
-  // 👉 MIN DATE (today)
-  const yyyy  = today.getFullYear();
-  const mm    = String(today.getMonth() + 1).padStart(2, '0');
-  const dd    = String(today.getDate()).padStart(2, '0');
-  const minIso = `${yyyy}-${mm}-${dd}`;
+        // 👉 MIN DATE (today)
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, "0");
+        const dd = String(today.getDate()).padStart(2, "0");
+        const minIso = `${yyyy}-${mm}-${dd}`;
 
-  // 👉 MAX DATE (today + 7 days)
-  const maxDate = new Date();
-  maxDate.setDate(today.getDate() + 7);
+        // 👉 MAX DATE (today + 7 days)
+        const maxDate = new Date();
+        maxDate.setDate(today.getDate() + 7);
 
-  const maxYYYY = maxDate.getFullYear();
-  const maxMM   = String(maxDate.getMonth() + 1).padStart(2, '0');
-  const maxDD   = String(maxDate.getDate()).padStart(2, '0');
-  const maxIso  = `${maxYYYY}-${maxMM}-${maxDD}`;
+        const maxYYYY = maxDate.getFullYear();
+        const maxMM = String(maxDate.getMonth() + 1).padStart(2, "0");
+        const maxDD = String(maxDate.getDate()).padStart(2, "0");
+        const maxIso = `${maxYYYY}-${maxMM}-${maxDD}`;
 
-  // 👉 Apply
-  real.min = minIso;
-  real.max = maxIso;
+        // 👉 Apply
+        real.min = minIso;
+        real.max = maxIso;
 
-  real.value   = minIso;
-  hidden.value = minIso;
-  display.value = `${dd}/${mm}/${yyyy}`;
-})();
+        real.value = minIso;
+        hidden.value = minIso;
+        display.value = `${dd}/${mm}/${yyyy}`;
+      })();
     </script>
   </body>
 </html>
