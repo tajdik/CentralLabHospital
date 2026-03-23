@@ -1,49 +1,151 @@
 [
   {
-    "name": "Dr. Md. Rafiqul Islam",
-    "speciality": "Medicine Specialist",
-    "days": "Sat, Mon, Wed",
-    "time": "5:00pm - 9:00pm",
+    "name": { "en": "Dr. Md. Rafiqul Islam", "bn": "ডা. মো. রফিকুল ইসলাম" },
+    "speciality": { "en": "Medicine Specialist", "bn": "মেডিসিন বিশেষজ্ঞ" },
+    "degrees": { "en": "MBBS, MD (Medicine)", "bn": "এমবিবিএস, এমডি (মেডিসিন)" },
+    "qualifications": {
+      "en": "MBBS – Rajshahi Medical College\nMD (Medicine) – BSMMU, Dhaka\nTraining in Diabetes & Hypertension Management",
+      "bn": "এমবিবিএস – রাজশাহী মেডিকেল কলেজ\nএমডি (মেডিসিন) – বিএসএমএমইউ, ঢাকা\nডায়াবেটিস ও হাইপারটেনশন ব্যবস্থাপনায় প্রশিক্ষণ"
+    },
+    "specializations": {
+      "en": ["General Medicine", "Diabetes", "Hypertension", "Fever & Infections", "Gastric & Liver Diseases"],
+      "bn": ["সাধারণ চিকিৎসা", "ডায়াবেটিস", "উচ্চ রক্তচাপ", "জ্বর ও সংক্রমণ", "গ্যাস্ট্রিক ও লিভার রোগ"]
+    },
+    "workplace": {
+      "en": "Central Lab Natore & Natore Sadar Hospital",
+      "bn": "সেন্ট্রাল ল্যাব নাটোর ও নাটোর সদর হাসপাতাল"
+    },
+    "schedule": [
+      {
+        "days": { "en": "Sat, Mon, Wed", "bn": "শনি, সোম, বুধ" },
+        "time": "5:00pm – 9:00pm"
+      }
+    ],
     "fee": "500 BDT",
     "image": "assets/images/doctor-placeholder.svg"
   },
   {
-    "name": "Dr. Sharmin Akter",
-    "speciality": "Gynecologist & Obstetrician",
-    "days": "Sun, Tue, Thu",
-    "time": "4:00pm - 8:00pm",
+    "name": { "en": "Dr. Sharmin Akter", "bn": "ডা. শারমিন আক্তার" },
+    "speciality": { "en": "Gynecologist & Obstetrician", "bn": "গাইনি ও প্রসূতি বিশেষজ্ঞ" },
+    "degrees": { "en": "MBBS, FCPS (Gynecology)", "bn": "এমবিবিএস, এফসিপিএস (গাইনি)" },
+    "qualifications": {
+      "en": "MBBS – Dhaka Medical College\nFCPS (Obstetrics & Gynecology) – BCPS\nFellowship in Infertility & High-Risk Pregnancy",
+      "bn": "এমবিবিএস – ঢাকা মেডিকেল কলেজ\nএফসিপিএস (প্রসূতি ও গাইনি) – বিসিপিএস\nবন্ধ্যাত্ব ও উচ্চ-ঝুঁকিপূর্ণ গর্ভাবস্থায় ফেলোশিপ"
+    },
+    "specializations": {
+      "en": ["Normal & C-Section Delivery", "Infertility Treatment", "PCOS / PCOD", "Menstrual Disorders", "High-Risk Pregnancy"],
+      "bn": ["স্বাভাবিক ও সিজারিয়ান প্রসব", "বন্ধ্যাত্ব চিকিৎসা", "পিসিওএস / পিসিওডি", "মাসিকের সমস্যা", "উচ্চ-ঝুঁকিপূর্ণ গর্ভাবস্থা"]
+    },
+    "workplace": {
+      "en": "Natore Women & Children Hospital",
+      "bn": "নাটোর মহিলা ও শিশু হাসপাতাল"
+    },
+    "schedule": [
+      {
+        "days": { "en": "Sun, Tue, Thu", "bn": "রবি, মঙ্গল, বৃহ" },
+        "time": "4:00pm – 8:00pm"
+      }
+    ],
     "fee": "600 BDT",
     "image": "assets/images/doctor-placeholder-female.svg"
   },
   {
-    "name": "Dr. Kamrul Hasan",
-    "speciality": "Cardiologist",
-    "days": "Mon, Wed, Fri",
-    "time": "6:00pm - 10:00pm",
+    "name": { "en": "Dr. Kamrul Hasan", "bn": "ডা. কামরুল হাসান" },
+    "speciality": { "en": "Cardiologist", "bn": "হৃদরোগ বিশেষজ্ঞ" },
+    "degrees": { "en": "MBBS, MD (Cardiology)", "bn": "এমবিবিএস, এমডি (কার্ডিওলজি)" },
+    "qualifications": {
+      "en": "MBBS – Sir Salimullah Medical College\nMD (Cardiology) – NICVD, Dhaka\nTraining in Interventional Cardiology, India",
+      "bn": "এমবিবিএস – স্যার সলিমুল্লাহ মেডিকেল কলেজ\nএমডি (কার্ডিওলজি) – এনআইসিভিডি, ঢাকা\nইন্টারভেনশনাল কার্ডিওলজিতে প্রশিক্ষণ, ভারত"
+    },
+    "specializations": {
+      "en": ["Heart Disease", "High Blood Pressure", "Chest Pain", "Arrhythmia", "Heart Failure"],
+      "bn": ["হৃদরোগ", "উচ্চ রক্তচাপ", "বুকে ব্যথা", "অ্যারিথমিয়া", "হার্ট ফেইলার"]
+    },
+    "workplace": {
+      "en": "Barind Medical College & Hospital, Rajshahi",
+      "bn": "বরেন্দ্র মেডিকেল কলেজ ও হাসপাতাল, রাজশাহী"
+    },
+    "schedule": [
+      {
+        "days": { "en": "Mon, Wed, Fri", "bn": "সোম, বুধ, শুক্র" },
+        "time": "6:00pm – 10:00pm"
+      }
+    ],
     "fee": "800 BDT",
     "image": "assets/images/doctor-placeholder.svg"
   },
   {
-    "name": "Dr. Nasrin Sultana",
-    "speciality": "Child Specialist (Pediatrics)",
-    "days": "Sat, Sun, Tue",
-    "time": "5:00pm - 8:00pm",
+    "name": { "en": "Dr. Nasrin Sultana", "bn": "ডা. নাসরিন সুলতানা" },
+    "speciality": { "en": "Child Specialist (Pediatrics)", "bn": "শিশু বিশেষজ্ঞ (পেডিয়াট্রিক্স)" },
+    "degrees": { "en": "MBBS, DCH, FCPS (Pediatrics)", "bn": "এমবিবিএস, ডিসিএইচ, এফসিপিএস (শিশুরোগ)" },
+    "qualifications": {
+      "en": "MBBS – Rajshahi Medical College\nDCH – BSMMU\nFCPS (Pediatrics) – BCPS\nTraining in Neonatal Care",
+      "bn": "এমবিবিএস – রাজশাহী মেডিকেল কলেজ\nডিসিএইচ – বিএসএমএমইউ\nএফসিপিএস (শিশুরোগ) – বিসিপিএস\nনবজাতক পরিচর্যায় প্রশিক্ষণ"
+    },
+    "specializations": {
+      "en": ["Newborn Care", "Child Nutrition", "Childhood Fever & Infections", "Asthma & Allergy", "Child Development"],
+      "bn": ["নবজাতক পরিচর্যা", "শিশু পুষ্টি", "শিশুর জ্বর ও সংক্রমণ", "অ্যাজমা ও অ্যালার্জি", "শিশু বিকাশ"]
+    },
+    "workplace": {
+      "en": "Natore Sadar Hospital & Central Lab Natore",
+      "bn": "নাটোর সদর হাসপাতাল ও সেন্ট্রাল ল্যাব নাটোর"
+    },
+    "schedule": [
+      {
+        "days": { "en": "Sat, Sun, Tue", "bn": "শনি, রবি, মঙ্গল" },
+        "time": "5:00pm – 8:00pm"
+      }
+    ],
     "fee": "500 BDT",
     "image": "assets/images/doctor-placeholder-female.svg"
   },
   {
-    "name": "Dr. Rezaul Karim",
-    "speciality": "Orthopedic Surgeon",
-    "days": "Thu, Fri, Sat",
-    "time": "4:00pm - 7:00pm",
+    "name": { "en": "Dr. Rezaul Karim", "bn": "ডা. রেজাউল করিম" },
+    "speciality": { "en": "Orthopedic Surgeon", "bn": "অর্থোপেডিক সার্জন" },
+    "degrees": { "en": "MBBS, MS (Orthopedics)", "bn": "এমবিবিএস, এমএস (অর্থোপেডিক্স)" },
+    "qualifications": {
+      "en": "MBBS – Rajshahi Medical College\nMS (Orthopedics) – BSMMU, Dhaka\nTraining in Joint Replacement & Spine Surgery",
+      "bn": "এমবিবিএস – রাজশাহী মেডিকেল কলেজ\nএমএস (অর্থোপেডিক্স) – বিএসএমএমইউ, ঢাকা\nজয়েন্ট রিপ্লেসমেন্ট ও মেরুদণ্ড অস্ত্রোপচারে প্রশিক্ষণ"
+    },
+    "specializations": {
+      "en": ["Bone & Joint Pain", "Arthritis (Bat-byatha)", "Spine & Back Pain", "Sports Injuries", "Diabetic Foot Care"],
+      "bn": ["হাড় ও জয়েন্টের ব্যথা", "আর্থ্রাইটিস (বাত-ব্যথা)", "মেরুদণ্ড ও পিঠের ব্যথা", "স্পোর্টস ইনজুরি", "ডায়াবেটিক ফুট কেয়ার"]
+    },
+    "workplace": {
+      "en": "Barind Medical College & Hospital, Rajshahi",
+      "bn": "বরেন্দ্র মেডিকেল কলেজ ও হাসপাতাল, রাজশাহী"
+    },
+    "schedule": [
+      {
+        "days": { "en": "Thu, Fri, Sat", "bn": "বৃহ, শুক্র, শনি" },
+        "time": "4:00pm – 7:00pm"
+      }
+    ],
     "fee": "700 BDT",
     "image": "assets/images/doctor-placeholder.svg"
   },
   {
-    "name": "Dr. Farhana Begum",
-    "speciality": "Eye Specialist (Ophthalmologist)",
-    "days": "Sun, Mon, Wed",
-    "time": "5:00pm - 9:00pm",
+    "name": { "en": "Dr. Farhana Begum", "bn": "ডা. ফারহানা বেগম" },
+    "speciality": { "en": "Eye Specialist (Ophthalmologist)", "bn": "চক্ষু বিশেষজ্ঞ (অফথালমোলজিস্ট)" },
+    "degrees": { "en": "MBBS, DO (Ophthalmology)", "bn": "এমবিবিএস, ডিও (চক্ষু বিজ্ঞান)" },
+    "qualifications": {
+      "en": "MBBS – Rajshahi Medical College\nDO (Ophthalmology) – BSMMU, Dhaka\nFellowship in Cataract & Refractive Surgery",
+      "bn": "এমবিবিএস – রাজশাহী মেডিকেল কলেজ\nডিও (চক্ষু বিজ্ঞান) – বিএসএমএমইউ, ঢাকা\nছানি ও রিফ্র্যাকটিভ সার্জারিতে ফেলোশিপ"
+    },
+    "specializations": {
+      "en": ["Cataract Surgery", "Diabetic Eye Disease", "Glaucoma", "Dry Eye Syndrome", "Refractive Errors (Glasses)"],
+      "bn": ["ছানি অপারেশন", "ডায়াবেটিক চোখের রোগ", "গ্লকোমা", "ড্রাই আই সিনড্রোম", "দৃষ্টি ক্ষমতার সমস্যা (চশমা)"]
+    },
+    "workplace": {
+      "en": "Natore Eye Hospital & Central Lab Natore",
+      "bn": "নাটোর চক্ষু হাসপাতাল ও সেন্ট্রাল ল্যাব নাটোর"
+    },
+    "schedule": [
+      {
+        "days": { "en": "Sun, Mon, Wed", "bn": "রবি, সোম, বুধ" },
+        "time": "5:00pm – 9:00pm"
+      }
+    ],
     "fee": "600 BDT",
     "image": "assets/images/doctor-placeholder-female.svg"
   }
