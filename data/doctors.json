@@ -484,5 +484,63 @@
     "image": "assets/images/doctors/dr-sushmi-binte-shahid.jpg",
     "sequence": 18,
     "isActive": true
-  }
+  },
+  {
+  "name": {
+    "en": "Dr. Ramkrishna Karmakar",
+    "bn": "ডাঃ রামকৃষ্ণ কর্মকার"
+  },
+  "speciality": {
+    "en": "Orthopedic Specialist & Surgeon",
+    "bn": "অর্থোপেডিক বিশেষজ্ঞ ও সার্জন"
+  },
+  "degrees": {
+    "en": "MBBS (Dhaka), D-Ortho (BSMMU), MSS (USA), FIPM (India), AO (Basic Trauma), Training in Diabetic Foot Care",
+    "bn": "এমবিবিএস (ঢাকা), ডি-অর্থো (বিএসএমএমইউ), এমএসএস (আমেরিকা), এফআইপিএম (ইন্ডিয়া), এও (বেসিক ট্রমা), ট্রেনিং ইন ডায়াবেটিক ফুট কেয়ার"
+  },
+  "qualifications": {
+    "en": "Assistant Professor, Bone-Joint, Rheumatology, Joint & Spine Specialist & Surgeon, Barind Medical College & Hospital, Rajshahi.",
+    "bn": "সহকারী অধ্যাপক, হাড়-জোড়া, বাত-ব্যথা, জয়েন্ট ও মেরুদন্ড রোগ বিশেষজ্ঞ ও সার্জন, বারিন্দ মেডিকেল কলেজ ও হাসপাতাল, রাজশাহী"
+  },
+  "specializations": {
+    "en": [
+      "Bone & Joint Care",
+      "Rheumatology",
+      "Spine Surgery",
+      "Trauma Care",
+      "Diabetic Foot Care"
+    ],
+    "bn": [
+      "হাড়-জোড়া",
+      "বাত-ব্যথা",
+      "জয়েন্ট ও মেরুদন্ড",
+      "ট্রমা কেয়ার",
+      "ডায়াবেটিক ফুট কেয়ার"
+    ]
+  },
+  "workplace": {
+    "en": "Central Lab & Hospital, Madrasa More, Zero Point, Natore.",
+    "bn": "সেন্ট্রাল ল্যাব এন্ড হাসপাতাল, মাদ্রাসা মোড়, জিরো পয়েন্ট, নাটোর"
+  },
+  "schedule": [
+    {
+      "days": {
+        "en": "Saturday to Tuesday",
+        "bn": "শনি থেকে মঙ্গলবার"
+      },
+      "time": "3:00pm - 8:00pm"
+    },
+    {
+      "days": {
+        "en": "Friday",
+        "bn": "শুক্রবার"
+      },
+      "time": "9:00am - 3:00pm"
+    }
+  ],
+  "fee": "Call for Fee",
+  "image": "assets/images/doctors/dr-ramkrishna-karmakar.jpg",
+  "sequence": 19,
+  "isActive": true
+}
 ]
