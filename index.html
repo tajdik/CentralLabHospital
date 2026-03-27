@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ═══════════════ PRIMARY SEO ═══════════════ -->
-    <title>
-      Central Lab & Hospital | Diagnostic & Hospital in Natore
-    </title>
+    <title>Central Lab & Hospital | Diagnostic & Hospital in Natore</title>
     <meta
       name="description"
       content="Central Lab & Hospital – Natore's most trusted diagnostic lab & Hospital. CBC, Blood Sugar, USG, ECG, X-Ray and 50+ tests. Expert doctor consultation daily. Book appointment now."
@@ -386,7 +384,9 @@
               <span class="text-base font-bold text-[#1D4ED8]"
                 >Central Lab</span
               >
-              <span class="text-base font-bold text-[#22C55E]"> & Hospital</span>
+              <span class="text-base font-bold text-[#22C55E]">
+                & Hospital</span
+              >
             </div>
           </a>
 
@@ -606,8 +606,8 @@
           class="hero-fade-in-delay2 text-lg md:text-xl opacity-90 mb-10 max-w-2xl mx-auto"
           data-i18n="hero_subtitle"
         >
-          Central Lab & Hospital - Modern diagnostic services and expert doctor consultation in the heart
-          of Natore. Fast, accurate, and affordable.
+          Central Lab & Hospital - Modern diagnostic services and expert doctor
+          consultation in the heart of Natore. Fast, accurate, and affordable.
         </p>
         <div
           class="hero-fade-in-delay3 flex flex-col sm:flex-row justify-center gap-4"
@@ -792,15 +792,15 @@
               Trusted Diagnostic Center & Hospital in Natore
             </h2>
             <p class="text-gray-600 mb-4 leading-relaxed" data-i18n="about_p1">
-              Central Lab & Hospital is a modern diagnostic and healthcare consultation center located
-              in the heart of Natore Madrasha Mor Zero Point. We provide a wide range of
-              laboratory tests and specialist doctor consultations at affordable
-              prices.
+              Central Lab & Hospital is a modern diagnostic and healthcare
+              consultation center located in the heart of Natore Madrasha Mor
+              Zero Point. We provide a wide range of laboratory tests and
+              specialist doctor consultations at affordable prices.
             </p>
             <p class="text-gray-600 mb-6 leading-relaxed" data-i18n="about_p2">
               Our state-of-the-art equipment, experienced medical team, and
-              commitment to accuracy make us the most trusted diagnostic center & hospital
-              in Natore.
+              commitment to accuracy make us the most trusted diagnostic center
+              & hospital in Natore.
             </p>
             <div class="grid grid-cols-2 gap-4">
               <div class="flex items-start gap-3 bg-blue-50 p-4 rounded-xl">
@@ -1444,8 +1444,7 @@
                   class="text-gray-600 text-sm mt-0.5"
                   data-i18n="contact_address"
                 >
-                  Madrasha Mor Zero Point, Natore
-                  Sadar, Natore-6400, Bangladesh
+                  Madrasha Mor Zero Point, Natore Sadar, Natore-6400, Bangladesh
                 </p>
               </div>
             </div>
@@ -1623,7 +1622,6 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div>
             <div class="flex items-center gap-2 mb-4">
-
               <img
                 src="assets/images/logo.png"
                 alt="Central Lab Natore"
@@ -1631,15 +1629,18 @@
               />
               <div>
                 <span class="text-base font-bold text-white">Central Lab</span>
-                <span class="text-base font-bold text-[#22C55E]"> & Hospital</span>
+                <span class="text-base font-bold text-[#22C55E]">
+                  & Hospital</span
+                >
               </div>
             </div>
             <p
               class="text-gray-400 text-sm leading-relaxed"
               data-i18n="footer_about"
             >
-              Central Lab & Hospital - Modern diagnostic services and expert doctor consultation in the
-              heart of Natore. Trusted by thousands of patients.
+              Central Lab & Hospital - Modern diagnostic services and expert
+              doctor consultation in the heart of Natore. Trusted by thousands
+              of patients.
             </p>
           </div>
           <div>
@@ -1698,8 +1699,8 @@
             </h4>
             <div class="space-y-3 text-sm text-gray-400">
               <p data-i18n="footer_address">
-                Madrasha Mor Zero Point, Natore
-                Sadar<br />Natore-6400, Bangladesh
+                Madrasha Mor Zero Point, Natore Sadar<br />Natore-6400,
+                Bangladesh
               </p>
               <p>
                 <a href="tel:+8801719882053" class="hover:text-white transition"
@@ -1963,7 +1964,8 @@
           footer_appt_link: "অ্যাপয়েন্টমেন্ট বুক করুন",
           footer_contact_link: "যোগাযোগ",
           footer_contact_title: "যোগাযোগ",
-          footer_address: "মাদ্রাসা মোড় জিরো পয়েন্ট, নাটোর সদর<br/>নাটোর-৬৪০০, বাংলাদেশ",
+          footer_address:
+            "মাদ্রাসা মোড় জিরো পয়েন্ট, নাটোর সদর<br/>নাটোর-৬৪০০, বাংলাদেশ",
           footer_hours:
             "শনি–বৃহ: সকাল ৯টা–রাত ৯টা &nbsp;|&nbsp; শুক্র: সকাল ৮টা–রাত ৯টা",
           footer_copyright:
@@ -2003,6 +2005,17 @@
       function toggleLang() {
         currentLang = currentLang === "en" ? "bn" : "en";
         applyLang(currentLang);
+        if (allTests.length) {
+          const q = document.getElementById("test-search").value.toLowerCase().trim();
+          const filtered = q
+            ? allTests.filter(
+                (t) =>
+                  t.name_en.toLowerCase().includes(q) ||
+                  t.name_bn.includes(q),
+              )
+            : allTests;
+          renderTests(filtered);
+        }
       }
 
       // ── HAMBURGER ──────────────────────────────
@@ -2357,15 +2370,16 @@
             '<p class="text-center text-gray-400 py-8">No tests found.</p>';
           return;
         }
+        const lang = currentLang;
         container.innerHTML = tests
           .map(
             (test, i) => `
         <div class="test-row flex justify-between items-center px-6 py-3.5 transition cursor-default ${i % 2 === 0 ? "bg-white" : "bg-gray-50/60"}">
           <div class="flex items-center gap-3">
             <div class="w-1.5 h-1.5 rounded-full bg-[#22C55E] flex-shrink-0"></div>
-            <span class="font-medium text-gray-700 text-sm">${test.name}</span>
+            <span class="font-medium text-gray-700 text-sm">${lang === "bn" ? test.name_bn : test.name_en}</span>
           </div>
-          <span class="font-bold text-[#1D4ED8] text-sm whitespace-nowrap ml-4">${test.price}</span>
+          <span class="font-bold text-[#1D4ED8] text-sm whitespace-nowrap ml-4">${lang === "bn" ? test.price_bn : test.price_en}</span>
         </div>
       `,
           )
@@ -2374,7 +2388,13 @@
 
       document.getElementById("test-search").addEventListener("input", (e) => {
         const q = e.target.value.toLowerCase().trim();
-        renderTests(allTests.filter((t) => t.name.toLowerCase().includes(q)));
+        renderTests(
+          allTests.filter(
+            (t) =>
+              t.name_en.toLowerCase().includes(q) ||
+              t.name_bn.includes(q),
+          ),
+        );
       });
 
       // ── APPOINTMENT FORM (Google Forms via hidden iframe) ──

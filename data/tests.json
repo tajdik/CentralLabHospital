@@ -1,26 +1,122 @@
 [
-  { "name": "CBC (Complete Blood Count)", "price": "400 BDT" },
-  { "name": "Blood Sugar (RBS)", "price": "150 BDT" },
-  { "name": "Blood Sugar (FBS/PP)", "price": "200 BDT" },
-  { "name": "HbA1c (Glycated Hemoglobin)", "price": "700 BDT" },
-  { "name": "Lipid Profile", "price": "1,200 BDT" },
-  { "name": "Liver Function Test (LFT)", "price": "1,000 BDT" },
-  { "name": "Kidney Function Test (KFT)", "price": "900 BDT" },
-  { "name": "Thyroid Profile (TSH, T3, T4)", "price": "1,500 BDT" },
-  { "name": "Urine R/E (Routine Examination)", "price": "200 BDT" },
-  { "name": "Urine Culture & Sensitivity", "price": "600 BDT" },
-  { "name": "Stool R/E", "price": "150 BDT" },
-  { "name": "ECG (Electrocardiogram)", "price": "500 BDT" },
-  { "name": "USG of Whole Abdomen", "price": "1,500 BDT" },
-  { "name": "USG of Pelvis (Gynecological)", "price": "1,200 BDT" },
-  { "name": "Chest X-Ray", "price": "600 BDT" },
-  { "name": "Hepatitis B Surface Antigen (HBsAg)", "price": "400 BDT" },
-  { "name": "Hepatitis C Antibody (Anti-HCV)", "price": "500 BDT" },
-  { "name": "HIV Test", "price": "400 BDT" },
-  { "name": "Widal Test", "price": "300 BDT" },
-  { "name": "Malaria Rapid Test (RDT)", "price": "250 BDT" },
-  { "name": "Dengue NS1 Antigen", "price": "700 BDT" },
-  { "name": "Pregnancy Test (Urine)", "price": "200 BDT" },
-  { "name": "Serum Creatinine", "price": "300 BDT" },
-  { "name": "Serum Uric Acid", "price": "300 BDT" }
+  {
+    "name_en": "CBC (Complete Blood Count)",
+    "name_bn": "সিবিসি (রক্তের সম্পূর্ণ গণনা)",
+    "price_en": "400 BDT",
+    "price_bn": "৪০০ টাকা"
+  },
+  {
+    "name_en": "Blood Sugar (RBS)",
+    "name_bn": "ব্লাড সুগার (আরবিএস)",
+    "price_en": "150 BDT",
+    "price_bn": "১৫০ টাকা"
+  },
+  {
+    "name_en": "Blood Sugar (FBS/PP)",
+    "name_bn": "ব্লাড সুগার (উপবাস/খাবারের পর)",
+    "price_en": "200 BDT",
+    "price_bn": "২০০ টাকা"
+  },
+  {
+    "name_en": "HbA1c (Glycated Hemoglobin)",
+    "name_bn": "এইচবিএওয়ানসি (গ্লাইকেটেড হিমোগ্লোবিন)",
+    "price_en": "800 BDT",
+    "price_bn": "৮০০ টাকা"
+  },
+  {
+    "name_en": "Lipid Profile",
+    "name_bn": "লিপিড প্রোফাইল (রক্তের চর্বি)",
+    "price_en": "1200 BDT",
+    "price_bn": "১২০০ টাকা"
+  },
+  {
+    "name_en": "Liver Function Test (LFT)",
+    "name_bn": "লিভার ফাংশন টেস্ট (এলএফটি)",
+    "price_en": "1000 BDT",
+    "price_bn": "১০০০ টাকা"
+  },
+  {
+    "name_en": "Kidney Function Test (KFT)",
+    "name_bn": "কিডনি ফাংশন টেস্ট (কেএফটি)",
+    "price_en": "1000 BDT",
+    "price_bn": "১০০০ টাকা"
+  },
+  {
+    "name_en": "Serum Creatinine",
+    "name_bn": "সিরাম ক্রিয়েটিনিন",
+    "price_en": "350 BDT",
+    "price_bn": "৩৫০ টাকা"
+  },
+  {
+    "name_en": "Thyroid Profile (TSH, T3, T4)",
+    "name_bn": "থাইরয়েড প্রোফাইল",
+    "price_en": "1500 BDT",
+    "price_bn": "১৫০০ টাকা"
+  },
+  {
+    "name_en": "Urine R/E",
+    "name_bn": "ইউরিন আর/ই (প্রস্রাব পরীক্ষা)",
+    "price_en": "250 BDT",
+    "price_bn": "২৫০ টাকা"
+  },
+  {
+    "name_en": "Urine Culture & Sensitivity",
+    "name_bn": "ইউরিন কালচার অ্যান্ড সেনসিটিভিটি",
+    "price_en": "650 BDT",
+    "price_bn": "৬৫০ টাকা"
+  },
+  {
+    "name_en": "ECG (Electrocardiogram)",
+    "name_bn": "ইসিজি (ইলেক্ট্রোকার্ডিওগ্রাম)",
+    "price_en": "500 BDT",
+    "price_bn": "৫০০ টাকা"
+  },
+  {
+    "name_en": "USG of Whole Abdomen",
+    "name_bn": "ইউএসজি (পেটের সম্পূর্ণ অংশ)",
+    "price_en": "1500 BDT",
+    "price_bn": "১৫০০ টাকা"
+  },
+  {
+    "name_en": "Chest X-Ray (P/A View)",
+    "name_bn": "বুকের এক্স-রে",
+    "price_en": "600 BDT",
+    "price_bn": "৬০০ টাকা"
+  },
+  {
+    "name_en": "HBsAg (Hepatitis B)",
+    "name_bn": "এইচবিএসএজি (হেপাটাইটিস বি)",
+    "price_en": "450 BDT",
+    "price_bn": "৪৫০ টাকা"
+  },
+  {
+    "name_en": "Dengue NS1 Antigen",
+    "name_bn": "ডেঙ্গু এনএস১ অ্যান্টিজেন",
+    "price_en": "700 BDT",
+    "price_bn": "৭০০ টাকা"
+  },
+  {
+    "name_en": "Serum Electrolytes",
+    "name_bn": "সিরাম ইলেক্ট্রোলাইটস",
+    "price_en": "1000 BDT",
+    "price_bn": "১০০০ টাকা"
+  },
+  {
+    "name_en": "Blood Grouping & Rh Typing",
+    "name_bn": "ব্লাড গ্রুপিং ও আরএইচ টাইপিং",
+    "price_en": "150 BDT",
+    "price_bn": "১৫০ টাকা"
+  },
+  {
+    "name_en": "Troponin I",
+    "name_bn": "ট্রপোনিন আই (হার্ট অ্যাটাক পরীক্ষা)",
+    "price_en": "1200 BDT",
+    "price_bn": "১২০০ টাকা"
+  },
+  {
+    "name_en": "VDRL",
+    "name_bn": "ভিডিআরএল",
+    "price_en": "300 BDT",
+    "price_bn": "৩০০ টাকা"
+  }
 ]
