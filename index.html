@@ -2188,9 +2188,10 @@
           const scheduleItems = schedule
             .map((s) => {
               const days = typeof s.days === "object" ? s.days[L] : s.days;
+              const time = typeof s.time === "object" ? s.time[L] : s.time;
               return `<div class="flex items-center gap-2 text-sm text-gray-600">
               <span class="font-medium text-gray-700">${days}:</span>
-              <span>${s.time}</span>
+              <span>${time}</span>
             </div>`;
             })
             .join("");
@@ -2201,7 +2202,11 @@
               ? firstSchedule.days[L]
               : firstSchedule.days
             : "";
-          const firstTime = firstSchedule.time || "";
+          const firstTime = firstSchedule.time
+            ? typeof firstSchedule.time === "object"
+              ? firstSchedule.time[L]
+              : firstSchedule.time
+            : "";
 
           const isExpanded = !!expandedStates[idx];
 
@@ -2246,7 +2251,7 @@
                   <svg class="w-3.5 h-3.5 text-[#22C55E] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
                   </svg>
-                  <span>${doc.fee}</span>
+                  <span>${typeof doc.fee === "object" ? doc.fee[L] : doc.fee}</span>
                 </div>
               </div>
 

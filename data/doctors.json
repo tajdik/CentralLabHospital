@@ -1,15 +1,34 @@
 [
   {
-    "name": { "en": "Dr. Md. Rakibul Islam (Dulal)", "bn": "ডাঃ মোঃ রাকিবুল ইসলাম (দুলাল)" },
-    "speciality": { "en": "Neuro Medicine (Brain, Nerve, Stroke & Spine) Specialist", "bn": "নিউরো মেডিসিন (ব্রেইন, নার্ভ, স্ট্রোক ও স্পাইন) বিশেষজ্ঞ" },
-    "degrees": { "en": "MBBS, BCS (Health), MD (Neuro Medicine)", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমডি (নিউরো মেডিসিন)" },
+    "name": {
+      "en": "Dr. Md. Rakibul Islam (Dulal)",
+      "bn": "ডাঃ মোঃ রাকিবুল ইসলাম (দুলাল)"
+    },
+    "speciality": {
+      "en": "Neuro Medicine (Brain, Nerve, Stroke & Spine) Specialist",
+      "bn": "নিউরো মেডিসিন (ব্রেইন, নার্ভ, স্ট্রোক ও স্পাইন) বিশেষজ্ঞ"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), MD (Neuro Medicine)",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমডি (নিউরো মেডিসিন)"
+    },
     "qualifications": {
       "en": "Registrar, National Institute of Neuro Sciences & Hospital, Dhaka.",
       "bn": "রেজিস্ট্রার, ন্যাশনাল ইন্সটিটিউট অব নিউরোসায়েন্স এন্ড হাসপাতাল, ঢাকা।"
     },
     "specializations": {
-      "en": ["Brain Diseases", "Nerve Disorders", "Stroke", "Spine Problems"],
-      "bn": ["ব্রেইন রোগ", "নার্ভ রোগ", "স্ট্রোক", "মেরুদণ্ড সমস্যা"]
+      "en": [
+        "Brain Diseases",
+        "Nerve Disorders",
+        "Stroke",
+        "Spine Problems"
+      ],
+      "bn": [
+        "ব্রেইন রোগ",
+        "নার্ভ রোগ",
+        "স্ট্রোক",
+        "মেরুদণ্ড সমস্যা"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Madrasa More Zero Point, Natore.",
@@ -17,26 +36,52 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Thursday", "bn": "প্রতি বৃহস্পতিবার" },
-        "time": "5:00pm - 8:00pm"
+        "days": {
+          "en": "Every Thursday",
+          "bn": "প্রতি বৃহস্পতিবার"
+        },
+        "time": {
+          "en": "5:00pm - 8:00pm",
+          "bn": "বিকাল ৫:০০ - রাত ৮:০০"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-rakibul-islam.jpg",
     "sequence": 5,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Ujjal Kumar Ghosh", "bn": "ডাঃ উজ্জ্বল কুমার ঘোষ" },
-    "speciality": { "en": "Medicine & Heart Disease Specialist", "bn": "মেডিসিন ও হৃদরোগ বিশেষজ্ঞ" },
-    "degrees": { "en": "MBBS, BCS (Health), MD (Cardiology)", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমডি (কার্ডিওলজি)" },
+    "name": {
+      "en": "Dr. Ujjal Kumar Ghosh",
+      "bn": "ডাঃ উজ্জ্বল কুমার ঘোষ"
+    },
+    "speciality": {
+      "en": "Medicine & Heart Disease Specialist",
+      "bn": "মেডিসিন ও হৃদরোগ বিশেষজ্ঞ"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), MD (Cardiology)",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমডি (কার্ডিওলজি)"
+    },
     "qualifications": {
       "en": "Consultant (Medicine & Cardiology), 250 Bedded General Hospital, Natore.",
       "bn": "কনসালটেন্ট (মেডিসিন ও হৃদরোগ), ২৫০ শয্যা বিশিষ্ট জেলা সদর হাসপাতাল, নাটোর।"
     },
     "specializations": {
-      "en": ["Heart Disease", "Medicine", "Cardiology"],
-      "bn": ["হৃদরোগ", "মেডিসিন", "কার্ডিওলজি"]
+      "en": [
+        "Heart Disease",
+        "Medicine",
+        "Cardiology"
+      ],
+      "bn": [
+        "হৃদরোগ",
+        "মেডিসিন",
+        "কার্ডিওলজি"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -44,26 +89,52 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-ujjal-kumar.jpg",
     "sequence": 6,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Md. Abdullah Al-Mamun", "bn": "ডাঃ মোঃ আব্দুল্লাহ আল-মামুন" },
-    "speciality": { "en": "Newborn, Child & Adolescent Disease Specialist", "bn": "নবজাতক, শিশু ও কিশোর রোগ বিশেষজ্ঞ" },
-    "degrees": { "en": "MBBS, BCS (Health), MD (Pediatrics)", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমডি (শিশুরোগ)" },
+    "name": {
+      "en": "Dr. Md. Abdullah Al-Mamun",
+      "bn": "ডাঃ মোঃ আব্দুল্লাহ আল-মামুন"
+    },
+    "speciality": {
+      "en": "Newborn, Child & Adolescent Disease Specialist",
+      "bn": "নবজাতক, শিশু ও কিশোর রোগ বিশেষজ্ঞ"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), MD (Pediatrics)",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমডি (শিশুরোগ)"
+    },
     "qualifications": {
       "en": "Assistant Professor, Rajshahi Medical College Hospital, Rajshahi.",
       "bn": "সহকারী অধ্যাপক, রাজশাহী মেডিকেল কলেজ হাসপাতাল, রাজশাহী।"
     },
     "specializations": {
-      "en": ["Newborn Care", "Child Health", "Adolescent Care"],
-      "bn": ["নবজাতক যত্ন", "শিশু স্বাস্থ্য", "কিশোর যত্ন"]
+      "en": [
+        "Newborn Care",
+        "Child Health",
+        "Adolescent Care"
+      ],
+      "bn": [
+        "নবজাতক যত্ন",
+        "শিশু স্বাস্থ্য",
+        "কিশোর যত্ন"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -71,26 +142,52 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-abdullah-al-mamun.jpg",
     "sequence": 1,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Md. Nazmul Haque", "bn": "ডাঃ মোঃ নাজমুল হক" },
-    "speciality": { "en": "Liver, General & Laparoscopic Surgeon", "bn": "লিভার, জেনারেল ও ল্যাপারোস্কপিক সার্জন" },
-    "degrees": { "en": "MBBS, BCS (Health), FCPS (Surgery), MS (Hepatobiliary Surgery)", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (সার্জারি), এমএস (হেপাটোবিলিয়ারী সার্জারি)" },
+    "name": {
+      "en": "Dr. Md. Nazmul Haque",
+      "bn": "ডাঃ মোঃ নাজমুল হক"
+    },
+    "speciality": {
+      "en": "Liver, General & Laparoscopic Surgeon",
+      "bn": "লিভার, জেনারেল ও ল্যাপারোস্কপিক সার্জন"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), FCPS (Surgery), MS (Hepatobiliary Surgery)",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (সার্জারি), এমএস (হেপাটোবিলিয়ারী সার্জারি)"
+    },
     "qualifications": {
       "en": "Associate Professor, Rajshahi Medical College Hospital, Rajshahi.",
       "bn": "সহযোগী অধ্যাপক, রাজশাহী মেডিকেল কলেজ হাসপাতাল, রাজশাহী।"
     },
     "specializations": {
-      "en": ["Liver Surgery", "General Surgery", "Laparoscopic Surgery"],
-      "bn": ["লিভার সার্জারি", "জেনারেল সার্জারি", "ল্যাপারোস্কপিক সার্জারি"]
+      "en": [
+        "Liver Surgery",
+        "General Surgery",
+        "Laparoscopic Surgery"
+      ],
+      "bn": [
+        "লিভার সার্জারি",
+        "জেনারেল সার্জারি",
+        "ল্যাপারোস্কপিক সার্জারি"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -98,26 +195,50 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Thursday", "bn": "প্রতি বৃহস্পতিবার" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Thursday",
+          "bn": "প্রতি বৃহস্পতিবার"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-nazmul-haque.jpg",
     "sequence": 4,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. S. M. Mahmud Hasan", "bn": "ডাঃ এস. এম. মাহমুদ হাসান" },
-    "speciality": { "en": "Kidney Disease Specialist", "bn": "কিডনী রোগ বিশেষজ্ঞ" },
-    "degrees": { "en": "MBBS, BCS (Health), MD (Nephrology)", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমডি (নেফ্রোলজী)" },
+    "name": {
+      "en": "Dr. S. M. Mahmud Hasan",
+      "bn": "ডাঃ এস. এম. মাহমুদ হাসান"
+    },
+    "speciality": {
+      "en": "Kidney Disease Specialist",
+      "bn": "কিডনী রোগ বিশেষজ্ঞ"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), MD (Nephrology)",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমডি (নেফ্রোলজী)"
+    },
     "qualifications": {
       "en": "Assistant Professor, Rajshahi Medical College Hospital, Rajshahi.",
       "bn": "সহকারী অধ্যাপক, রাজশাহী মেডিকেল কলেজ হাসপাতাল, রাজশাহী।"
     },
     "specializations": {
-      "en": ["Kidney Diseases", "Nephrology Care"],
-      "bn": ["কিডনী রোগ", "নেফ্রোলজী কেয়ার"]
+      "en": [
+        "Kidney Diseases",
+        "Nephrology Care"
+      ],
+      "bn": [
+        "কিডনী রোগ",
+        "নেফ্রোলজী কেয়ার"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -125,26 +246,52 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Thursday", "bn": "প্রতি বৃহস্পতিবার" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Thursday",
+          "bn": "প্রতি বৃহস্পতিবার"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-mahmud-hasan.jpg",
     "sequence": 3,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Tanjina Binte Mosaddek Tajin", "bn": "ডাঃ তানজিনা বিনতে মোসাদ্দেক তাজিন" },
-    "speciality": { "en": "Infertility, Obstetrics & Gynecology Specialist & Surgeon", "bn": "বন্ধ্যাত্ব, প্রসূতি ও স্ত্রী রোগ বিশেষজ্ঞ ও সার্জন" },
-    "degrees": { "en": "MBBS, BCS (Health), FCPS (Obstetrics & Gynecology)", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (প্রসূতি ও গাইনী)" },
+    "name": {
+      "en": "Dr. Tanjina Binte Mosaddek Tajin",
+      "bn": "ডাঃ তানজিনা বিনতে মোসাদ্দেক তাজিন"
+    },
+    "speciality": {
+      "en": "Infertility, Obstetrics & Gynecology Specialist & Surgeon",
+      "bn": "বন্ধ্যাত্ব, প্রসূতি ও স্ত্রী রোগ বিশেষজ্ঞ ও সার্জন"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), FCPS (Obstetrics & Gynecology)",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (প্রসূতি ও গাইনী)"
+    },
     "qualifications": {
       "en": "Assistant Professor, Rajshahi Medical College Hospital, Rajshahi.",
       "bn": "সহকারী অধ্যাপক, রাজশাহী মেডিকেল কলেজ হাসপাতাল, রাজশাহী।"
     },
     "specializations": {
-      "en": ["Infertility Treatment", "Obstetrics Care", "Gynecology Surgery"],
-      "bn": ["বন্ধ্যাত্ব চিকিৎসা", "প্রসূতি যত্ন", "গাইনী সার্জারি"]
+      "en": [
+        "Infertility Treatment",
+        "Obstetrics Care",
+        "Gynecology Surgery"
+      ],
+      "bn": [
+        "বন্ধ্যাত্ব চিকিৎসা",
+        "প্রসূতি যত্ন",
+        "গাইনী সার্জারি"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -152,26 +299,50 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-tanjina-tajin.jpg",
     "sequence": 2,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Murad-Ud-Dowla", "bn": "ডাঃ মুরাদ-উদ-দৌলা" },
-    "speciality": { "en": "Orthopedic Specialist & Surgeon", "bn": "অর্থোপেডিক বিশেষজ্ঞ ও সার্জন" },
-    "degrees": { "en": "MBBS, BCS (Health), D-Ortho", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), ডি-অর্থো" },
+    "name": {
+      "en": "Dr. Murad-Ud-Dowla",
+      "bn": "ডাঃ মুরাদ-উদ-দৌলা"
+    },
+    "speciality": {
+      "en": "Orthopedic Specialist & Surgeon",
+      "bn": "অর্থোপেডিক বিশেষজ্ঞ ও সার্জন"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), D-Ortho",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), ডি-অর্থো"
+    },
     "qualifications": {
       "en": "Assistant Professor, Rajshahi Medical College Hospital, Rajshahi.",
       "bn": "সহকারী অধ্যাপক, রাজশাহী মেডিকেল কলেজ হাসপাতাল, রাজশাহী।"
     },
     "specializations": {
-      "en": ["Bone & Joint Care", "Orthopedic Surgery"],
-      "bn": ["হাড় ও জয়েন্ট যত্ন", "অর্থোপেডিক সার্জারি"]
+      "en": [
+        "Bone & Joint Care",
+        "Orthopedic Surgery"
+      ],
+      "bn": [
+        "হাড় ও জয়েন্ট যত্ন",
+        "অর্থোপেডিক সার্জারি"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -179,26 +350,50 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-murad-dowla.jpg",
     "sequence": 7,
     "isActive": false
   },
   {
-    "name": { "en": "Dr. S. M. Foysal Haque", "bn": "ডাঃ এস. এম. ফয়সাল হক" },
-    "speciality": { "en": "Orthopedic Specialist & Surgeon", "bn": "অর্থোপেডিক বিশেষজ্ঞ ও সার্জন" },
-    "degrees": { "en": "MBBS, BCS (Health), MS (Orthopedics)", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমএস (অর্থোপেডিক্স)" },
+    "name": {
+      "en": "Dr. S. M. Foysal Haque",
+      "bn": "ডাঃ এস. এম. ফয়সাল হক"
+    },
+    "speciality": {
+      "en": "Orthopedic Specialist & Surgeon",
+      "bn": "অর্থোপেডিক বিশেষজ্ঞ ও সার্জন"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), MS (Orthopedics)",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমএস (অর্থোপেডিক্স)"
+    },
     "qualifications": {
       "en": "Assistant Professor, National Institute of Traumatology and Orthopaedic Rehabilitation (NITOR), Dhaka.",
       "bn": "সহকারী অধ্যাপক, জাতীয় অর্থোপেডিক হাসপাতাল ও পুনর্বাসন প্রতিষ্ঠান (নিটোর), ঢাকা।"
     },
     "specializations": {
-      "en": ["Orthopedic Traumatology", "Bone Surgery"],
-      "bn": ["অর্থোপেডিক ট্রম্যাটোলজি", "হাড় সার্জারি"]
+      "en": [
+        "Orthopedic Traumatology",
+        "Bone Surgery"
+      ],
+      "bn": [
+        "অর্থোপেডিক ট্রম্যাটোলজি",
+        "হাড় সার্জারি"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -206,26 +401,50 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Thursday", "bn": "প্রতি বৃহস্পতিবার" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Thursday",
+          "bn": "প্রতি বৃহস্পতিবার"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-foysal-haque.jpg",
     "sequence": 8,
     "isActive": false
   },
   {
-    "name": { "en": "Dr. K. M. Nazmul Islam", "bn": "ডাঃ কে. এম. নাজমুল ইসলাম" },
-    "speciality": { "en": "Medicine Specialist", "bn": "মেডিসিন বিশেষজ্ঞ" },
-    "degrees": { "en": "MBBS, BCS (Health), FCPS (Medicine)", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (মেডিসিন)" },
+    "name": {
+      "en": "Dr. K. M. Nazmul Islam",
+      "bn": "ডাঃ কে. এম. নাজমুল ইসলাম"
+    },
+    "speciality": {
+      "en": "Medicine Specialist",
+      "bn": "মেডিসিন বিশেষজ্ঞ"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), FCPS (Medicine)",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (মেডিসিন)"
+    },
     "qualifications": {
       "en": "Medicine Specialist, 250 Bedded General Hospital, Natore.",
       "bn": "মেডিসিন বিশেষজ্ঞ, ২৫০ শয্যা বিশিষ্ট জেলা সদর হাসপাতাল, নাটোর।"
     },
     "specializations": {
-      "en": ["General Medicine", "Adult Health"],
-      "bn": ["সাধারণ মেডিসিন", "বয়স্ক স্বাস্থ্য"]
+      "en": [
+        "General Medicine",
+        "Adult Health"
+      ],
+      "bn": [
+        "সাধারণ মেডিসিন",
+        "বয়স্ক স্বাস্থ্য"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -233,26 +452,52 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-km-nazmul-islam.jpg",
     "sequence": 9,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Naima Ishrat Esha", "bn": "ডাঃ নাইমা ইশরাত এষা" },
-    "speciality": { "en": "Infertility, Obstetrics & Gynecology Specialist & Surgeon", "bn": "বন্ধ্যাত্ব, প্রসূতি ও স্ত্রী রোগ বিশেষজ্ঞ ও সার্জন" },
-    "degrees": { "en": "MBBS, BCS (Health), MS (Obstetrics & Gynecology)", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমএস (প্রসূতি ও গাইনী)" },
+    "name": {
+      "en": "Dr. Naima Ishrat Esha",
+      "bn": "ডাঃ নাইমা ইশরাত এষা"
+    },
+    "speciality": {
+      "en": "Infertility, Obstetrics & Gynecology Specialist & Surgeon",
+      "bn": "বন্ধ্যাত্ব, প্রসূতি ও স্ত্রী রোগ বিশেষজ্ঞ ও সার্জন"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), MS (Obstetrics & Gynecology)",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমএস (প্রসূতি ও গাইনী)"
+    },
     "qualifications": {
       "en": "Assistant Professor, Rajshahi Medical College Hospital, Rajshahi.",
       "bn": "সহকারী অধ্যাপক, রাজশাহী মেডিকেল কলেজ হাসপাতাল, রাজশাহী।"
     },
     "specializations": {
-      "en": ["Infertility Treatment", "Maternal Care", "Gynecology"],
-      "bn": ["বন্ধ্যাত্ব চিকিৎসা", "মাতৃত্বকালীন যত্ন", "গাইনী"]
+      "en": [
+        "Infertility Treatment",
+        "Maternal Care",
+        "Gynecology"
+      ],
+      "bn": [
+        "বন্ধ্যাত্ব চিকিৎসা",
+        "মাতৃত্বকালীন যত্ন",
+        "গাইনী"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -260,26 +505,50 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-naima-esha.jpg",
     "sequence": 10,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Md. Altaf Hossain (Atik)", "bn": "ডাঃ মোঃ আলতাফ হোসেন (আতিক)" },
-    "speciality": { "en": "Medicine & Diabetes Disease Specialist", "bn": "মেডিসিন ও ডায়াবেটিস রোগ বিশেষজ্ঞ" },
-    "degrees": { "en": "MBBS, BCS (Health), MD (Internal Medicine)", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমডি (ইন্টারনাল মেডিসিন)" },
+    "name": {
+      "en": "Dr. Md. Altaf Hossain (Atik)",
+      "bn": "ডাঃ মোঃ আলতাফ হোসেন (আতিক)"
+    },
+    "speciality": {
+      "en": "Medicine & Diabetes Disease Specialist",
+      "bn": "মেডিসিন ও ডায়াবেটিস রোগ বিশেষজ্ঞ"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), MD (Internal Medicine)",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমডি (ইন্টারনাল মেডিসিন)"
+    },
     "qualifications": {
       "en": "Medicine Specialist, 250 Bedded General Hospital, Natore.",
       "bn": "মেডিসিন বিশেষজ্ঞ, ২৫০ শয্যা বিশিষ্ট জেলা সদর হাসপাতাল, নাটোর।"
     },
     "specializations": {
-      "en": ["Internal Medicine", "Diabetes Management"],
-      "bn": ["ইন্টারনাল মেডিসিন", "ডায়াবেটিস নিয়ন্ত্রণ"]
+      "en": [
+        "Internal Medicine",
+        "Diabetes Management"
+      ],
+      "bn": [
+        "ইন্টারনাল মেডিসিন",
+        "ডায়াবেটিস নিয়ন্ত্রণ"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -287,26 +556,50 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-altaf-hossain.jpg",
     "sequence": 11,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Aminul Islam Magnet", "bn": "ডাঃ আমিনুল ইসলাম ম্যাগনেট" },
-    "speciality": { "en": "Nose, Ear, Throat Disease Specialist & Surgeon", "bn": "নাক, কান, গলা রোগ বিশেষজ্ঞ ও সার্জন" },
-    "degrees": { "en": "MBBS, BCS (Health), DLO", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), ডিএলও" },
+    "name": {
+      "en": "Dr. Aminul Islam Magnet",
+      "bn": "ডাঃ আমিনুল ইসলাম ম্যাগনেট"
+    },
+    "speciality": {
+      "en": "Nose, Ear, Throat Disease Specialist & Surgeon",
+      "bn": "নাক, কান, গলা রোগ বিশেষজ্ঞ ও সার্জন"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), DLO",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), ডিএলও"
+    },
     "qualifications": {
       "en": "Senior Consultant (ENT), 250 Bedded General Hospital, Natore.",
       "bn": "সিনিয়র কনসালটেন্ট (ইএনটি), ২৫০ শয্যা বিশিষ্ট জেলা সদর হাসপাতাল, নাটোর।"
     },
     "specializations": {
-      "en": ["ENT Diseases", "Ear, Nose, Throat Surgery"],
-      "bn": ["নাক কান গলা রোগ", "ইএনটি সার্জারি"]
+      "en": [
+        "ENT Diseases",
+        "Ear, Nose, Throat Surgery"
+      ],
+      "bn": [
+        "নাক কান গলা রোগ",
+        "ইএনটি সার্জারি"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -314,26 +607,50 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-aminul-islam.jpg",
     "sequence": 12,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Shahidul Islam Robin", "bn": "ডাঃ শহিদুল ইসলাম রবিন" },
-    "speciality": { "en": "General & Laparoscopic Surgeon", "bn": "জেনারেল ও ল্যাপারোস্কপিক সার্জন" },
-    "degrees": { "en": "MBBS, BCS (Health), FCPS (General Surgery)", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (জেনারেল সার্জারি)" },
+    "name": {
+      "en": "Dr. Shahidul Islam Robin",
+      "bn": "ডাঃ শহিদুল ইসলাম রবিন"
+    },
+    "speciality": {
+      "en": "General & Laparoscopic Surgeon",
+      "bn": "জেনারেল ও ল্যাপারোস্কপিক সার্জন"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), FCPS (General Surgery)",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (জেনারেল সার্জারি)"
+    },
     "qualifications": {
       "en": "Assistant Professor, Rajshahi Medical College Hospital, Rajshahi.",
       "bn": "সহকারী অধ্যাপক, রাজশাহী মেডিকেল কলেজ হাসপাতাল, রাজশাহী।"
     },
     "specializations": {
-      "en": ["General Surgery", "Laparoscopic Procedures"],
-      "bn": ["জেনারেল সার্জারি", "ল্যাপারোস্কপিক পদ্ধতি"]
+      "en": [
+        "General Surgery",
+        "Laparoscopic Procedures"
+      ],
+      "bn": [
+        "জেনারেল সার্জারি",
+        "ল্যাপারোস্কপিক পদ্ধতি"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -341,26 +658,50 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-shahidul-islam.jpg",
     "sequence": 13,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Md. Imran Ahmed", "bn": "ডাঃ মোঃ ইমরান আহমেদ" },
-    "speciality": { "en": "General Surgeon", "bn": "জেনারেল সার্জন" },
-    "degrees": { "en": "MBBS, BCS (Health), FCPS (Surgery), MS", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (সার্জারি), এমএস" },
+    "name": {
+      "en": "Dr. Md. Imran Ahmed",
+      "bn": "ডাঃ মোঃ ইমরান আহমেদ"
+    },
+    "speciality": {
+      "en": "General Surgeon",
+      "bn": "জেনারেল সার্জন"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), FCPS (Surgery), MS",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (সার্জারি), এমএস"
+    },
     "qualifications": {
       "en": "Registrar, 250 Bedded General Hospital, Natore.",
       "bn": "রেজিস্ট্রার, ২৫০ শয্যা বিশিষ্ট জেলা সদর হাসপাতাল, নাটোর।"
     },
     "specializations": {
-      "en": ["General Surgery", "Surgical Care"],
-      "bn": ["জেনারেল সার্জারি", "সার্জিক্যাল যত্ন"]
+      "en": [
+        "General Surgery",
+        "Surgical Care"
+      ],
+      "bn": [
+        "জেনারেল সার্জারি",
+        "সার্জিক্যাল যত্ন"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -368,26 +709,52 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-imran-ahmed.jpg",
     "sequence": 14,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Shafiur Rahman Shanto", "bn": "ডাঃ শাফিউর রহমান শান্ত" },
-    "speciality": { "en": "Skin, Sexual & Allergy Disease Specialist", "bn": "চর্ম, যৌন ও এ্যালার্জী রোগ বিশেষজ্ঞ" },
-    "degrees": { "en": "MBBS, DDV", "bn": "এমবিবিএস, ডিডিভি" },
+    "name": {
+      "en": "Dr. Shafiur Rahman Shanto",
+      "bn": "ডাঃ শাফিউর রহমান শান্ত"
+    },
+    "speciality": {
+      "en": "Skin, Sexual & Allergy Disease Specialist",
+      "bn": "চর্ম, যৌন ও এ্যালার্জী রোগ বিশেষজ্ঞ"
+    },
+    "degrees": {
+      "en": "MBBS, DDV",
+      "bn": "এমবিবিএস, ডিডিভি"
+    },
     "qualifications": {
       "en": "Registrar, TMSS Medical College Hospital, Bogra.",
       "bn": "রেজিস্ট্রার, টিএমএসএস মেডিকেল কলেজ হাসপাতাল, বগুড়া।"
     },
     "specializations": {
-      "en": ["Skin Diseases", "Sexual Health", "Allergy Care"],
-      "bn": ["চর্ম রোগ", "যৌন স্বাস্থ্য", "এ্যালার্জী যত্ন"]
+      "en": [
+        "Skin Diseases",
+        "Sexual Health",
+        "Allergy Care"
+      ],
+      "bn": [
+        "চর্ম রোগ",
+        "যৌন স্বাস্থ্য",
+        "এ্যালার্জী যত্ন"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -395,26 +762,52 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Friday", "bn": "প্রতি শুক্রবার" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Friday",
+          "bn": "প্রতি শুক্রবার"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-shafiur-rahman.jpg",
     "sequence": 15,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. S. M. Farhad", "bn": "ডাঃ এস. এম. ফরহাদ" },
-    "speciality": { "en": "Skin, Sexual & Allergy Disease Specialist", "bn": "চর্ম, যৌন ও এ্যালার্জী রোগ বিশেষজ্ঞ" },
-    "degrees": { "en": "MBBS, DDV", "bn": "এমবিবিএস, ডিডিভি" },
+    "name": {
+      "en": "Dr. S. M. Farhad",
+      "bn": "ডাঃ এস. এম. ফরহাদ"
+    },
+    "speciality": {
+      "en": "Skin, Sexual & Allergy Disease Specialist",
+      "bn": "চর্ম, যৌন ও এ্যালার্জী রোগ বিশেষজ্ঞ"
+    },
+    "degrees": {
+      "en": "MBBS, DDV",
+      "bn": "এমবিবিএস, ডিডিভি"
+    },
     "qualifications": {
       "en": "Consultant (Skin & Sex), 250 Bedded General Hospital, Natore.",
       "bn": "কনসালটেন্ট (চর্ম ও যৌন), ২৫০ শয্যা বিশিষ্ট জেলা সদর হাসপাতাল, নাটোর।"
     },
     "specializations": {
-      "en": ["Skin Care", "Sexual Disorders", "Allergies"],
-      "bn": ["চর্ম যত্ন", "যৌন ব্যাধি", "এ্যালার্জী"]
+      "en": [
+        "Skin Care",
+        "Sexual Disorders",
+        "Allergies"
+      ],
+      "bn": [
+        "চর্ম যত্ন",
+        "যৌন ব্যাধি",
+        "এ্যালার্জী"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -422,26 +815,52 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-sm-farhad.jpg",
     "sequence": 16,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Md. Abdus Salam Sheikh", "bn": "ডাঃ মোঃ আব্দুস সালাম শেখ" },
-    "speciality": { "en": "Skin, Sexual & Allergy Disease Specialist", "bn": "চর্ম, যৌন ও এ্যালার্জী রোগ বিশেষজ্ঞ" },
-    "degrees": { "en": "MBBS, BCS (Health), DDV, FCPS (Skin & Sex)", "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), ডিডিভি, এফসিপিএস (চর্ম ও যৌন)" },
+    "name": {
+      "en": "Dr. Md. Abdus Salam Sheikh",
+      "bn": "ডাঃ মোঃ আব্দুস সালাম শেখ"
+    },
+    "speciality": {
+      "en": "Skin, Sexual & Allergy Disease Specialist",
+      "bn": "চর্ম, যৌন ও এ্যালার্জী রোগ বিশেষজ্ঞ"
+    },
+    "degrees": {
+      "en": "MBBS, BCS (Health), DDV, FCPS (Skin & Sex)",
+      "bn": "এমবিবিএস, বিসিএস (স্বাস্থ্য), ডিডিভি, এফসিপিএস (চর্ম ও যৌন)"
+    },
     "qualifications": {
       "en": "Skin & Sex Disease Specialist, 250 Bedded General Hospital, Natore.",
       "bn": "চর্ম ও যৌন রোগ বিশেষজ্ঞ, ২৫০ শয্যা বিশিষ্ট জেলা সদর হাসপাতাল, নাটোর।"
     },
     "specializations": {
-      "en": ["Dermatology", "Venereology", "Allergy Treatment"],
-      "bn": ["চর্মরোগ", "যৌনরোগ", "এ্যালার্জী চিকিৎসা"]
+      "en": [
+        "Dermatology",
+        "Venereology",
+        "Allergy Treatment"
+      ],
+      "bn": [
+        "চর্মরোগ",
+        "যৌনরোগ",
+        "এ্যালার্জী চিকিৎসা"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -449,26 +868,52 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-abdus-salam.jpg",
     "sequence": 17,
     "isActive": true
   },
   {
-    "name": { "en": "Dr. Sushmi Binte Shahid", "bn": "ডাঃ সুষ্মি বিনতে শহীদ" },
-    "speciality": { "en": "Infertility, Obstetrics & Gynecology Disease Physician", "bn": "বন্ধ্যাত্ব, স্ত্রী ও প্রসূতি রোগ চিকিৎসক" },
-    "degrees": { "en": "MBBS, DGO, MCPS", "bn": "এমবিবিএস, ডিজিও, এমসিপিএস" },
+    "name": {
+      "en": "Dr. Sushmi Binte Shahid",
+      "bn": "ডাঃ সুষ্মি বিনতে শহীদ"
+    },
+    "speciality": {
+      "en": "Infertility, Obstetrics & Gynecology Disease Physician",
+      "bn": "বন্ধ্যাত্ব, স্ত্রী ও প্রসূতি রোগ চিকিৎসক"
+    },
+    "degrees": {
+      "en": "MBBS, DGO, MCPS",
+      "bn": "এমবিবিএস, ডিজিও, এমসিপিএস"
+    },
     "qualifications": {
       "en": "General Physician & Consultant Sonologist.",
       "bn": "জেনারেল ফিজিশিয়ান ও কনসালটেন্ট সোনোলজিস্ট।"
     },
     "specializations": {
-      "en": ["Infertility Care", "Gynecology", "Ultrasonography"],
-      "bn": ["বন্ধ্যাত্ব যত্ন", "গাইনী", "আলট্রাসনোগ্রাফি"]
+      "en": [
+        "Infertility Care",
+        "Gynecology",
+        "Ultrasonography"
+      ],
+      "bn": [
+        "বন্ধ্যাত্ব যত্ন",
+        "গাইনী",
+        "আলট্রাসনোগ্রাফি"
+      ]
     },
     "workplace": {
       "en": "Central Lab & Hospital, Natore.",
@@ -476,71 +921,89 @@
     },
     "schedule": [
       {
-        "days": { "en": "Every Day", "bn": "প্রতিদিন" },
-        "time": "Call for Time"
+        "days": {
+          "en": "Every Day",
+          "bn": "প্রতিদিন"
+        },
+        "time": {
+          "en": "Call for Time",
+          "bn": "সময় জানতে কল করুন"
+        }
       }
     ],
-    "fee": "Call for Fee",
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
     "image": "assets/images/doctors/dr-sushmi-binte-shahid.jpg",
     "sequence": 18,
     "isActive": true
   },
   {
-  "name": {
-    "en": "Dr. Ramkrishna Karmakar",
-    "bn": "ডাঃ রামকৃষ্ণ কর্মকার"
-  },
-  "speciality": {
-    "en": "Orthopedic Specialist & Surgeon",
-    "bn": "অর্থোপেডিক বিশেষজ্ঞ ও সার্জন"
-  },
-  "degrees": {
-    "en": "MBBS (Dhaka), D-Ortho (BSMMU), MSS (USA), FIPM (India), AO (Basic Trauma), Training in Diabetic Foot Care",
-    "bn": "এমবিবিএস (ঢাকা), ডি-অর্থো (বিএসএমএমইউ), এমএসএস (আমেরিকা), এফআইপিএম (ইন্ডিয়া), এও (বেসিক ট্রমা), ট্রেনিং ইন ডায়াবেটিক ফুট কেয়ার"
-  },
-  "qualifications": {
-    "en": "Assistant Professor, Bone-Joint, Rheumatology, Joint & Spine Specialist & Surgeon, Barind Medical College & Hospital, Rajshahi.",
-    "bn": "সহকারী অধ্যাপক, হাড়-জোড়া, বাত-ব্যথা, জয়েন্ট ও মেরুদন্ড রোগ বিশেষজ্ঞ ও সার্জন, বারিন্দ মেডিকেল কলেজ ও হাসপাতাল, রাজশাহী"
-  },
-  "specializations": {
-    "en": [
-      "Bone & Joint Care",
-      "Rheumatology",
-      "Spine Surgery",
-      "Trauma Care",
-      "Diabetic Foot Care"
-    ],
-    "bn": [
-      "হাড়-জোড়া",
-      "বাত-ব্যথা",
-      "জয়েন্ট ও মেরুদন্ড",
-      "ট্রমা কেয়ার",
-      "ডায়াবেটিক ফুট কেয়ার"
-    ]
-  },
-  "workplace": {
-    "en": "Central Lab & Hospital, Madrasa More, Zero Point, Natore.",
-    "bn": "সেন্ট্রাল ল্যাব এন্ড হাসপাতাল, মাদ্রাসা মোড়, জিরো পয়েন্ট, নাটোর"
-  },
-  "schedule": [
-    {
-      "days": {
-        "en": "Saturday to Tuesday",
-        "bn": "শনি থেকে মঙ্গলবার"
-      },
-      "time": "3:00pm - 8:00pm"
+    "name": {
+      "en": "Dr. Ramkrishna Karmakar",
+      "bn": "ডাঃ রামকৃষ্ণ কর্মকার"
     },
-    {
-      "days": {
-        "en": "Friday",
-        "bn": "শুক্রবার"
+    "speciality": {
+      "en": "Orthopedic Specialist & Surgeon",
+      "bn": "অর্থোপেডিক বিশেষজ্ঞ ও সার্জন"
+    },
+    "degrees": {
+      "en": "MBBS (Dhaka), D-Ortho (BSMMU), MSS (USA), FIPM (India), AO (Basic Trauma), Training in Diabetic Foot Care",
+      "bn": "এমবিবিএস (ঢাকা), ডি-অর্থো (বিএসএমএমইউ), এমএসএস (আমেরিকা), এফআইপিএম (ইন্ডিয়া), এও (বেসিক ট্রমা), ট্রেনিং ইন ডায়াবেটিক ফুট কেয়ার"
+    },
+    "qualifications": {
+      "en": "Assistant Professor, Bone-Joint, Rheumatology, Joint & Spine Specialist & Surgeon, Barind Medical College & Hospital, Rajshahi.",
+      "bn": "সহকারী অধ্যাপক, হাড়-জোড়া, বাত-ব্যথা, জয়েন্ট ও মেরুদন্ড রোগ বিশেষজ্ঞ ও সার্জন, বারিন্দ মেডিকেল কলেজ ও হাসপাতাল, রাজশাহী"
+    },
+    "specializations": {
+      "en": [
+        "Bone & Joint Care",
+        "Rheumatology",
+        "Spine Surgery",
+        "Trauma Care",
+        "Diabetic Foot Care"
+      ],
+      "bn": [
+        "হাড়-জোড়া",
+        "বাত-ব্যথা",
+        "জয়েন্ট ও মেরুদন্ড",
+        "ট্রমা কেয়ার",
+        "ডায়াবেটিক ফুট কেয়ার"
+      ]
+    },
+    "workplace": {
+      "en": "Central Lab & Hospital, Madrasa More, Zero Point, Natore.",
+      "bn": "সেন্ট্রাল ল্যাব এন্ড হাসপাতাল, মাদ্রাসা মোড়, জিরো পয়েন্ট, নাটোর"
+    },
+    "schedule": [
+      {
+        "days": {
+          "en": "Saturday to Tuesday",
+          "bn": "শনি থেকে মঙ্গলবার"
+        },
+        "time": {
+          "en": "3:00pm - 8:00pm",
+          "bn": "বিকাল ৩:০০ - রাত ৮:০০"
+        }
       },
-      "time": "9:00am - 3:00pm"
-    }
-  ],
-  "fee": "Call for Fee",
-  "image": "assets/images/doctors/dr-ramkrishna-karmakar.jpg",
-  "sequence": 19,
-  "isActive": true
-}
+      {
+        "days": {
+          "en": "Friday",
+          "bn": "শুক্রবার"
+        },
+        "time": {
+          "en": "9:00am - 3:00pm",
+          "bn": "সকাল ৯:০০ - বিকাল ৩:০০"
+        }
+      }
+    ],
+    "fee": {
+      "en": "Call for Fee",
+      "bn": "ফি জানতে কল করুন"
+    },
+    "image": "assets/images/doctors/dr-ramkrishna-karmakar.jpg",
+    "sequence": 19,
+    "isActive": true
+  }
 ]
