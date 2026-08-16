@@ -2416,6 +2416,13 @@
       // ── APPOINTMENT FORM (Google Forms via hidden iframe) ──
       const form = document.getElementById("appointment-form");
       form.addEventListener("submit", () => {
+        if (typeof gtag === "function") {
+          gtag("event", "appointment_submit", {
+            event_category: "engagement",
+            event_label: "Appointment Form",
+          });
+        }
+
         const btn = form.querySelector('button[type="submit"]');
         btn.disabled = true;
         btn.innerHTML = `<svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
@@ -2501,6 +2508,52 @@
         real.value = minIso;
         hidden.value = minIso;
         display.value = `${dd}/${mm}/${yyyy}`;
+      })();
+
+      // ── GA4 CUSTOM EVENT TRACKING (calls, WhatsApp, email, CTAs) ──
+      (function () {
+        if (typeof gtag !== "function") return;
+
+        function sectionOf(el) {
+          const landmark = el.closest("nav, footer, section[id]");
+          if (!landmark) return "floating";
+          if (landmark.tagName === "NAV") return "nav";
+          if (landmark.tagName === "FOOTER") return "footer";
+          return landmark.id;
+        }
+
+        document.addEventListener("click", function (e) {
+          const link = e.target.closest("a");
+          if (!link) return;
+          const href = link.getAttribute("href") || "";
+          const location = sectionOf(link);
+
+          if (href.startsWith("tel:")) {
+            gtag("event", "call_click", {
+              event_category: "engagement",
+              event_label: href.replace("tel:", ""),
+              link_location: location,
+            });
+          } else if (href.includes("wa.me")) {
+            gtag("event", "whatsapp_click", {
+              event_category: "engagement",
+              event_label: "WhatsApp",
+              link_location: location,
+            });
+          } else if (href.startsWith("mailto:")) {
+            gtag("event", "email_click", {
+              event_category: "engagement",
+              event_label: href.replace("mailto:", ""),
+              link_location: location,
+            });
+          } else if (href === "#appointment") {
+            gtag("event", "book_appointment_click", {
+              event_category: "engagement",
+              event_label: link.textContent.trim(),
+              link_location: location,
+            });
+          }
+        });
       })();
     </script>
   </body>
