@@ -2281,6 +2281,12 @@
                     btn.classList.toggle('active', isOpen);
                     const t = i18n[currentLang];
                     btn.querySelector('.details-label').textContent = isOpen ? t['doc_hide_details'] : t['doc_view_details'];
+                    if (isOpen && typeof gtag === 'function') {
+                      gtag('event', 'doctor_view_details', {
+                        event_category: 'engagement',
+                        event_label: '${name.replace(/'/g, "\\'")}',
+                      });
+                    }
                   })(this)">
                   <span class="details-label">${isExpanded ? t["doc_hide_details"] : t["doc_view_details"]}</span>
                   <svg class="chevron w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
